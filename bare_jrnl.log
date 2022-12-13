@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.20)  13 DEC 2022 21:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.20)  13 DEC 2022 21:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -437,10 +437,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 513
 
 (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]
+)
 Overfull \hbox (3.00505pt too wide) in paragraph at lines 560--560
  []|$\OML/cmm/m/it/8 head\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 e[]\OT1/cmr/m/n/8 )$| 
 
@@ -457,7 +454,10 @@ Overfull \hbox (1.54114pt too wide) in paragraph at lines 577--577
  [] 
  []
 
+[1{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
+
+]
 Overfull \hbox (3.3407pt too wide) in paragraph at lines 620--620
  []|$\OML/cmm/m/it/8 head\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 p[]\OT1/cmr/m/n/8 )$| 
 
@@ -485,6 +485,9 @@ Overfull \hbox (2.52391pt too wide) in paragraph at lines 670--670
  []|$\OML/cmm/m/it/8 cost\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 R[]\OT1/cmr/m/n/8 )$| 
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (23.18605pt too high) has occurred while \output is active []
@@ -558,7 +561,7 @@ Overfull \hbox (1.71843pt too wide) in paragraph at lines 953--972
 Here is how much of TeX's memory you used:
  6240 strings out of 478268
  108735 string characters out of 5850344
- 426951 words of memory out of 5000000
+ 425951 words of memory out of 5000000
  24345 multiletter control sequences out of 15000+600000
  512229 words of font info for 106 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -580,7 +583,7 @@ sfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texli
 ve/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (6 pages, 234803 bytes).
+Output written on bare_jrnl.pdf (6 pages, 234763 bytes).
 PDF statistics:
  123 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream

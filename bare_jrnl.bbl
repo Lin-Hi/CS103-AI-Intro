@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{inproceedings}
+{\sc Bensedira, B., Layeb, A., and Zendaoui, Z.}
+\newblock A partial tours based path-scanning heuristic for the capacitated arc
+  routing problem.
+\newblock pp.~1--6.
+
+\bibitem{CARP}
+{\sc Golden, B.~L., and Wong, R.~T.}
+\newblock Capacitated arc routing problems.
+\newblock {\em Networks 11}, 3 (1981), 305--315.
+
+\bibitem{1962Graphic}
+{\sc Mei, K.~K.}
+\newblock Graphic programming using odd or even points.
+\newblock {\em Chinese Mathematics 1\/} (1962), 263--266.
+
+\bibitem{RPP}
+{\sc Orloff, C.~S.}
+\newblock A fundamental problem in vehicle routing.
+\newblock {\em Networks 4}, 1 (1974), 35--64.
+
+\end{thebibliography}

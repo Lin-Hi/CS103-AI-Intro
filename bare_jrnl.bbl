@@ -1,9 +1,8 @@
 \begin{thebibliography}{10}
 
-\bibitem{Papyrus}
-{\sc Abitbol, R., Shimshoni, I., and Ben-Dov, J.}
-\newblock Machine learning based assembly of fragments of ancient papyrus.
-\newblock {\em J. Comput. Cult. Herit. 14}, 3 (jul 2021).
+\bibitem{Anichini2018BigAD}
+{\sc Anichini, F., and Gattiglia, G.}
+\newblock Big archaeological data. the archaide project approach.
 
 \bibitem{inproceedings}
 {\sc Bensedira, B., Layeb, A., and Zendaoui, Z.}
@@ -15,6 +14,22 @@
 {\sc Bickler, S.~H.}
 \newblock Machine learning arrives in archaeology.
 \newblock {\em Advances in Archaeological Practice 9}, 2 (2021), 186–191.
+
+\bibitem{2020_challenge}
+{\sc Davis, D.~S., DiNapoli, R.~J., and Douglass, K.}
+\newblock Integrating point process models, evolutionary ecology and
+  traditional knowledge improves landscape archaeology—a case from southwest
+  madagascar.
+\newblock {\em Geosciences 10}, 8 (2020).
+
+\bibitem{2019_challenge}
+{\sc Douglass, K., Quintana~Morales, E., Manahira, G., Fenomanana, F., Samba,
+  R., Lahiniriko, F., Chrisostome, Z., Vavisoa, V., Soafiavy, P., Justome, R.,
+  Leonce, H., Hubertine, L., Pierre, B., Tahirisoa, C., Colomb, C., Lovanirina,
+  F., Andriankaja, V., and Robison, R.}
+\newblock Toward a just and inclusive environmental archaeology of southwest
+  madagascar.
+\newblock {\em Journal of Social Archaeology 19\/} (07 2019), 146960531986207.
 
 \bibitem{Drap2018UnderwaterPF}
 {\sc Drap, P., Scaradozzi, D., Gambogi, P., and Gauch, F.}
@@ -38,22 +53,6 @@
 \newblock Detecting neolithic burial mounds from lidar-derived elevation data
   using a multi-scale approach and machine learning techniques.
 \newblock {\em Remote Sensing 10}, 2 (2018).
-
-\bibitem{Syrian_images}
-{\sc Karterouli, K., and Batsaki, Y.}
-\newblock Ai and cultural heritage image collections: Opportunities and
-  challenges.
-
-\bibitem{KUHL1982236}
-{\sc Kuhl, F.~P., and Giardina, C.~R.}
-\newblock Elliptic fourier features of a closed contour.
-\newblock {\em Computer Graphics and Image Processing 18}, 3 (1982), 236--258.
-
-\bibitem{MEBATSION201263}
-{\sc Mebatsion, H., Paliwal, J., and Jayas, D.}
-\newblock Evaluation of variations in the shape of grain types using principal
-  components analysis of the elliptic fourier descriptors.
-\newblock {\em Computers and Electronics in Agriculture 80\/} (2012), 63--70.
 
 \bibitem{1962Graphic}
 {\sc Mei, K.~K.}

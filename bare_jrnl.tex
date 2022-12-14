@@ -487,24 +487,28 @@
 	% and "HIS" in caps to complete the first word.
 	\IEEEPARstart {A}{rtificial} Intelligence (AI for short) is a new study area rising in recent centuries, and can be divided into several directions, like Machine Learning (ML) or Neural Network (NN). Five to ten years ago, they were concepts unknown to archaeologists. But now, AI is widely used, there are even sessions dedicated to AI at archaeological conferences.\cite{heritage4010008}
 	
-	\subsection{Machine Learning}
-	
 	ML is programming allowing algorithm learning from data and adjust its parameters and then make predictions on new data. Objects must be quantify into digital data first and can be any type, like sonar data under water\cite{Drap2018UnderwaterPF} or aerial
 	laser scanning data \cite{rs10020225}. ML uses mathematical techniques to analyze a set of already-classified objects and generate "classifiers" for each category. In theory, objects in every category is identified from other categories in mathematics. In short, ML use math to classify quantifiable objects into different groups.\cite{bickler_2021}
 	
-	\subsection{ML Application}
+	Ml application can be divided into two main types: classify archaeological objects, and identify archaeological sites, both of which will be explained more detailed in \ref{application}.
+
 	
-	Ml application can be divided into two main types: classify archaeological objects, and identify archaeological sites.
 	
-	Classification mainly use graphs as database. Techniques like elliptic Fourier analysis are used to extract shape characteristics from graphs, not only shape of specific object like grain\cite{MEBATSION201263}, but any shape of any type\cite{KUHL1982236}. Classified objects can be various, Karterouli and Batsaki focus on 10,000 images of Syrian monuments to improve the speed and efficiency of sharing collections\cite{Syrian_images}, while Abitbol and Shimshoni work on fragments of ancient papyrus for matching and assembling\cite{Papyrus}. 
+	\section{Application}\label{application}
 	
-	ML can also use on search for sites, thanks for increasing availability of large-scale lidar, satellite, and aerial imagery. ML can help to identify variables that make contribution to prediction of locations\cite{bickler_2021}. `
+	\section{Classic example}\label{example}
 	
-	\subsection{Shortage}
+	\section{Shortage}
 	
 	Despite its help, ML still has some limitations.
 	
-	\section{A detailed classification}\label{example}
+	The biggest difficulty is the shortage of training data. Archaeology is widely digitised, but rarely datafied\cite{Anichini2018BigAD}. ML prefers Big Data which is findable, accessible, interoperable, and reusable. But nature of archaeology makes it hard to produce huge data, and much already-had data is unusable due to copyright or legislation.\cite{heritage4010008}
+	
+	ML relies on its previously created model too much, and requires new data to be applicable to its model. Most ML models for archaeological data are less reliable than human experts now, because algorithms can't consider the variation and consistencies of data. That is, human experts can quickly handle easy cases, and move extra time to complicate cases, but algorithms handle every sample with same process and consume similar time. This disadvantage may offset ML advantages of high calculation speed and scalability benefits.\cite{bickler_2021}
+	
+	The diversity of archaeological  objects makes classification more hard. The archaeological recovered samples may become fragmented, or be covered by patina and vegetation. These poor preservation of samples makes classification hard. Moreover, rare and unusual objects may be ignored by ML models. A look-like ``normal'' ceramic vessel may has an unusual surface treatment, which will be easily noticed by human, could be classified into normal category by ML models.\cite{bickler_2021}
+	
+	A third reason is the accuracy of evaluation function in ML model. This often appears in factors related to culture or belief. Archaeologists can use surveys based on acultural factors to create models that are stripped of cultural context and meaning. But these assumptions are being more and more challenged, especially when surveys focus on behaviors and outcomes rooted in cultural value systems.\cite{2019_challenge}\cite{2020_challenge}
 	
 	
 	\subsection{Arc Routing Problem}

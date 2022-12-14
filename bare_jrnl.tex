@@ -494,548 +494,199 @@
 	
 	\subsection{ML Application}
 	
-	Ml application can be divided into two main types: classify archaeological objects, and identify archaeological sites.
-	
-	Classification mainly use graphs as database. Techniques like elliptic Fourier analysis are used to extract shape characteristics from graphs, not only shape of specific object like grain\cite{MEBATSION201263}, but any shape of any type\cite{KUHL1982236}. Classified objects can be various, Karterouli and Batsaki focus on 10,000 images of Syrian monuments to improve the speed and efficiency of sharing collections\cite{Syrian_images}, while Abitbol and Shimshoni work on fragments of ancient papyrus for matching and assembling\cite{Papyrus}. 
-	
-	ML can also use on search for sites, thanks for increasing availability of large-scale lidar, satellite, and aerial imagery. ML can help to identify variables that make contribution to prediction of locations\cite{bickler_2021}. `
-	
-	\subsection{Shortage}
-	
-	Despite its help, ML still has some limitations.
-	
-	\section{A detailed classification}\label{example}
+	ML application can be divided into two main types: to classify archaeological objects, and to detect objects in archaeological sites.
 	
 	
-	\subsection{Arc Routing Problem}
-	Routing Problem can be divided into two main directions. One is to regard vertices as serve object, whose name is Vertex Routing Problem (VRP). Another is to regard edges as serve object, whose name is Arc Routing Problem (ARP). What this paper focus is a subclass of Arc Routing Problem.
-	
-	The characteristics of Arc Routing Problem is that, a set of vehicles start from a given depot, and serve all edges which has demand to handle. It can be divided into three main subclass: Chinese Postman Problem (CPP), Rural Postman Problem (RPP), and Capacitated Arc Routing Problem (CARP). \cite{inproceedings}
-	
-	The CPP is defined by Guan in 1962\cite{1962Graphic}, it's a problem of finding a cycle of minimal total cost passing at least once through each edge of an undirected graph, which is NP-hard under a mixed graph. 
-	
-	The RPP is introduced by Orloff in 1974\cite{RPP}, in which only a subset of the required edges must be traversed rather than all edges, and the main purpose ot RPP is to find the minimal cost of time to traverse edges. This problem is also NP-hard.
-	
-	The CARP is introduced by Golden and Wong in 1981\cite{CARP}, the purpose of which is to determine a route for each vehicle such that the total cost is minimum and all positive demand arcs or edges are served. The total demand of each route must be less than or equal to the capacity of corresponding vehicle. And the undirected or directed CARP is always NP-hard.
-	
-	% needed in second column of first page if using \IEEEpubid
-	%\IEEEpubidadjcol
-	
-	\subsection{CARP}
-	CARP is defined on undirected connected graph.Each edge, also called arc, in this graph, has a non-negative cost and a non-negative demand. In detail, cost is the price to pay when traverse the edge, demand is the amount need to serve in this edge. One specific vertex in the graph is appointed as depot. a given number of vehicles are put in this depot at the beginning, each vehicle has its own capacity, the load of one vehicle can't exceed its capacity.
-	
-	More specifically, the CARP problem follows rules:
-	
+	\section{Application}\label{application}
+
+	Deep learning (DL) has been successfully used in many applications. Among the DL
+	methods, recurrent neural networks (RNNs) are good at dealing with sequential data as they
+	take into account temporal information. RNNs have been applied in speech recognition to
+	map acoustic sequences to phonetic sequences. RNNs have also been used in natural
+	language processing to translate text from one language to another. Another
+	famous method in DL is convolutional neural networks (CNNs). CNNs take into
+	account spatial correlation among data points and hence perform well in image-based data.
+	CNNs have been used in image classification, face recognition,
+	scene labelling, and so on. DL methods are also used in the field of remote sensing.
+	For example, Hu and Yuan used CNNs to extract digital terrain models (DTMs) and filter out non-ground
+	points from airborne laser scanning (ALS) data, which was claimed that this method performs better than
+	previous filtering methods\cite{HuXiangyun2016DCfD}.
+
+	In the papers we've read, we've found that all of them, without exception, use CNNs to study a specific thing.
+	This is because the things they studied were all based on image data, in which CNNs performs better than RNNs.
+
+	We divide the papers that use CNNs into two types: one is to classify archaeological objects like papyrus, potteries, and so on, the other is to detect objects in archaeological sites.
+
+	\subsection{classify archaeological objects}
+
 	\begin{itemize}
-		\item When a vehicle traverse an edge, it need to pay the cost corresponding to that edge.
-		\item When a vehicle traverse an edge, it  can choose to or not to serve this edge.
-		\item If vehicle serve one edge, the demand of that edge will become zero, and the load of vehicle will increase by the amount of demand in this edge.
-		\item If vehicle choose not to serve this edge, then both demand of edge and load of vehicle will not change.
-		\item Each demand edge can only be served totally and only can be served once, its demand is an overall and can't be divided.
-		\item All demand edges must be served.
-		\item Whether or not vehicle serves edge, vehicle must pay price at amount of cost in corresponding edge.
-		\item All vehicles have the same capacity.
-		\item During the whole process, all vehicles need to meet the requirement that vehicle's load can't exceed its capacity.
-		\item At any time, a vehicle can go back to depot to unload.
-		\item After unload, the load on vehicle will become zero.
-		\item The passed edges in the process of go back to depot will also be consider as price to pay.
-		\item After serving all demand edges, vehicle must return back to depot.
+	\item In the paper\cite{Papyrus}, a method is proposed for matching and assembling pairs of ancient papyrus fragments containing mostly unknown scriptures.
+		  This task, which is assembling fragments in a puzzle-like manner into a composite picture, plays an important role in the archaeology, because it can help historic artifacts to reconstruct archaeological objects for research.
+		  The proposed method is to use image processing and machine learning techniques to identify matching fragments, and then support the quick and automated classification of matching pairs of papyrus fragments as well
+		  as the geometric alignment of the pairs against each other. The algorithm was trained on a batch of fragments which was excavated from the Dead Sea caves and is dated circa the 1st
+		  century BCE. The algorithm shows excellent results on a validation set which is of a similar origin and conditions.
+		  Then the algorithm was used to  against a real-life set of fragments for with no prior knowledge or labeling of matches.
+		  This test batch is considered extremely challenging due to its poor condition and the small size of its fragments. Evidently,
+		  numerous researchers have tried seeking matches within this batch with very little success. The algorithm performance on
+		  this batch was sub-optimal, returning a relatively large ratio of false positives. However, the results showed that this algorithm
+		  eliminated 98\% of the possible matches thus reducing the amount of work needed for manual inspection, which means this algorithm was quite useful. Indeed, experts that
+		  reviewed the results have identified some positive matches as potentially true and referred them for further investigation.
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.9\linewidth]{./picture/fig1.png}
+			\caption{An example of two adjacent artificially torn fragments with a set of candidate squares to be used in
+			the matching phase.}
+		  \end{figure}
+	\item In the paper\cite{Syrian_images}, the project developed at Dumbarton Oaks---a research institute and library, museum, and historic 
+		  garden affiliated with Harvard University and located in Washington, DC--- focused on a 
+		  collection of 10,000 images of Syrian monuments in the institution's Image Collections and 
+		  Fieldwork Archives (ICFA). Drawing on that project, as well as the broader landscape of AI-based categorisation efforts in the fields of art and architecture, authors' insights on the potential of AI to facilitate and enhance archival image access and recording will be shaerd. Many of the Syrian sites in the Dumbarton Oaks collection have been inaccessible to researchers and the public for over a decade and/or have been damaged or destroyed. For Dumbarton Oaks, the primary goal was to explore whether AI can improve the speed and efficiency of sharing collections and allow for more sophisticated curation by subject experts who, thanks to automation, would be relieved of the burden of rote processing. The methods and techniques explored included multi-label classification, multi-task classification, unsupervised image clustering, and explainability.
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.9\linewidth]{./picture/fig2.png}
+			\caption{Explainability heatmaps for predictions of the 
+			classes “architecture” (left) and “façades” (right) by the 
+			Phase 1 classifier.}
+		  \end{figure}
+	\item The main contribution in this paper\cite{heritage4010008} is the completion of the project called ArchAIDE.
+		  This project  realised an AI-based application to recognise archaeological pottery.
+		  Pottery is of paramount importance for understanding archaeological contexts. However, recognition of
+		  ceramics is still a manual, time-consuming activity , reliant on analogue catalogues. The project
+		  developed two complementary machine-learning tools to propose identifications based on images
+		  captured on-site, for optimising and economising this process, while retaining key decision points
+		  necessary to create trusted results. One method relies on the shape of a potsherd; the other is based
+		  on decorative features. For the shape-based recognition, a novel deep-learning architecture was
+		  employed, integrating shape information from points along the inner and outer profile of a sherd.
+		  The decoration classifier is based on relatively standard architectures used in image recognition. In
+		  both cases, training the algorithms meant facing challenges related to real-world archaeological data:
+		  the scarcity of labelled data; extreme imbalance between instances of different categories; and the
+		  need to take note of minute differentiating features. Finally , the creation of a desktop and mobile
+		  application that integrates the AI classifiers provides an easy-to-use interface for pottery classification
+		  and storing pottery data.
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.9\linewidth]{./picture/fig3.png}
+			\caption{The ArchAIDE portal is available at the Archaeology Data Service of the University of York.}
+		  \end{figure}
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.9\linewidth]{./picture/fig4.png}
+			\caption{The automated extraction of the outer (green) and inner (red) profiles from a real-world sherd image.}
+		  \end{figure}
+	\item The paper\cite{CeramicFabric} indicate that deep learning with CNNs is a highly accessible and 
+	      effective method for classifying ceramic fabrics based on images of petrographic thin 
+		  sections and that it can likely be applied on a larger scale.
+		  Classification of ceramic fabrics has long held a major role in archaeological pursuits. 
+		  It helps answer research questions related to ceramic technology, provenance, and 
+		  exchange and provides an overall deeper understanding of the ceramic material at 
+		  hand. One of the most effective means of classification is through petrographic thin 
+		  section analysis. However, ceramic petrography is a difficult and often tedious task 
+		  that requires direct observation and sorting by domain experts. In this paper, a deep 
+		  learning model is built to automatically recognize and classify ceramic fabrics, which 
+		  expedites the process of classification and lessens the requirements on experts. The 
+		  samples consist of images of petrographic thin sections under cross-polarized light 
+		  originating from the Cocal-period (AD 1000-1525) archaeological site of Guadalupe 
+		  on the northeast coast of Honduras. Two CNNs, 
+		  VGG19 and ResNet50, are compared against each other using two approaches to 
+		  partitioning training, validation, and testing data. The technique employs a standard 
+		  transfer learning process whereby the bottom layers of the CNNs are pre-trained 
+		  on the ImageNet dataset and frozen, while a single pooling layer and three dense 
+		  layers are added to 'tune' the model to the thin section dataset. After selecting fabric 
+		  groups with at least three example sherds each, the technique can classify thin section 
+		  images into one of five fabric groups with over 93\% accuracy in each of four tests. 
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=1.0\linewidth]{./picture/fig5.png}
+			\caption{Examples of the five ceramic fabric types analyzed.}
+		  \end{figure}
+	\item In the study\cite{PawlowiczLeszekM.2021Aodl}, an alternate approach to archaeological typology which uses DL to classify digital 
+		  images of decorated pottery sherds into an existing typological framework is presented. This study focuses on a specific kind of ancient painted pottery from the American Southwest, Tusayan White Ware (TWW), but it is believed that it has broader implications for a wide range of geographical settings and artifact types. The results show that when properly trained, a deep learning model can assign types to digital images of decorated sherds with an accuracy comparable to, and sometimes higher than, four expert-level contemporary archaeologists. The technique also offers novel tools for visualizing both the importance of diagnostic design elements and overall design relationships between groups of pottery sherds. This method can objectively match a specific unclassified sherd image to its most similar counterparts through a search of thousands of digital photos. This discovery has important archaeological implications for analyzing time relationships, monitoring stylistic trends, reconstructing fragmentary artifacts, identifying ancient artisans, and studying the evolution and spread of ancient technologies and styles. It also shows how deep learning models can potentially supplement or supplant traditional typologies in favor of more direct groupings and comparisons of artifacts.
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=1.0\linewidth]{./picture/fig6.png}
+			\caption{ Grad-CAM heat maps for TWW sherds, showing areas of high (red) and low (blue) model activation for a Kayenta sherd (top) and Flagstaff sherd (bottom). 
+			CNN-model-calculated type confidences shown below each sherd.}
+		  \end{figure}
 	\end{itemize}
 
-	The purpose of CARP is to minimize the total cost to pay while satisfying all rules above.
-	
-    
+	\subsection{detect objects in archaeological sites}
 
-	\section{Preliminaries}
-	
-	To formalize problem , some terms need to be introduced, all are listed in Table \ref{formulation term 1}, Table \ref{formulation term 2}, and Table \ref{formulation term 3}.
-	
-	\subsection{CARP Formulation}
-	
-	\begin{table}[H]
-		\begin{center}
-			\caption{Notations for formulation, part I}
-			\begin{tabular}{m{1cm}<{\centering}|m{6cm}}
-				\toprule
-				\textbf{Term} & \textbf{Explanation} \\
-				\midrule
-				$G$ & Given undirected graph \\
-				\specialrule{0em}{2pt}{2pt}
-				$E$ & Edge set, consist of all edges in $G$ \\
-				\specialrule{0em}{2pt}{2pt}
-				$e$ & Directed edge \\
-				\specialrule{0em}{2pt}{2pt}
-				$e'$ & Undirected edge \\
-				\specialrule{0em}{2pt}{2pt}
-				$e_i$ & A directed edge identified by $i$\\
-				\specialrule{0em}{2pt}{2pt}
-				$e_{i}'$ & The undirected edge having same endpoints as $e_i$. \\
-				\specialrule{0em}{2pt}{2pt} 
-				$v_d$ & The depot vertex \\
-				
-				\specialrule{0em}{2pt}{2pt} 
-				$head(e_i)$ & A vertex, the head of edge $e_i$ \\
-				\specialrule{0em}{2pt}{2pt} 
-				$tail(e_i)$ & A vertex, the tail of edge $e_i$ \\
-				\specialrule{0em}{2pt}{2pt} 
-				$p$ & 
-				A directed path, may consists of multiple edges. If consists more than one edges, then all included edges are connected end to end. Presented as:
-				$$p=\bigcup_{k=1}^m e_k$$
-				satisfying $$m \in \mathbb{N}$$
-				If $m\geq2$, then need to satisfy another condition:
-				$$\forall k \in [1,m-1],tail(e_k)=head(e_{k+1})$$ \\
-				\specialrule{0em}{2pt}{2pt}
-				$p_i$ & A directed path identified by $i$. \\
-				\specialrule{0em}{2pt}{2pt}
-				$p(v_i,v_j)$ & The directed path start from $v_i$ and end at $e_j$. Among all satisfied path, no other path has less cost sum of all edges on itself than this path. $v_i$ is a vertex identified by $i$, $v_j$ is a vertex identified by $j$. \\
-				\specialrule{0em}{2pt}{2pt}
-				$cost(e_i)$ & The minimal cost need to pay for the path traversing from $head(e_i)$ to $tail(e_i)$. If this path contains more than one edge \\
-				\specialrule{0em}{2pt}{2pt} 
-				\makecell{$dmd(e_i)$\\$dmd(e_i')$} & The demand need to serve on edge $e_i$ or $e_i'$, ``dmd'' is short for ``demand''. \\
-				\specialrule{0em}{2pt}{2pt} 
-				$cap$ & Capacity of vehicle. All vehicles are same. \\
-				\specialrule{0em}{2pt}{2pt} 
-				$r$& 
-				$r$ is a route start and end at depot. $r$ consists of many directed edges, all demands are not zero. $m$ is the number of edges in $r$, is an attribute of $r$  rather than another requirement parameter. $r$ is also called "route" in natural language in this paper. Presented as:
-				$$r = \bigcup\limits_{k=1}^{m}e_k$$
-				satisfying: 
-				$$ \left\{
-				\begin{aligned}
-					& e_{k}{'} \in E \\
-					& m \geq 2 \\
-					& m \in \mathbb{N} \\
-					& head(e_1)=v_d \\
-					& tail(e_m)=v_d \\
-					& \forall k \in [1,m-1], dmd(e_k) > 0 \\
-					& \sum_{k=1}^m dmd(e_k) \leq cap \\
-				\end{aligned}
-				\right.  $$
-				\\
-				\bottomrule
-			\end{tabular}
-		\label{formulation term 1}
-	\end{center}
-	\end{table}
+	Airborne laser scanning (ALS) is of great use in
+	collecting and documenting detailed measurements from an area of interest. However, it is
+	time consuming for scientists to manually analyze the collected ALS data. One possible way to
+	automate this process is using deep neural networks.
 
-	\begin{table}[H]
-		\begin{center}
-			\caption{Notations for formulation, part 2}
-			\begin{tabular}{m{1cm}<{\centering}|m{6cm}}
-				\toprule
-				\textbf{Term} & \textbf{Explanation} \\
-				\midrule
-				\specialrule{0em}{2pt}{2pt}
-				$cost(p_i)$ & 
-				Given 
-				$$p=\bigcup_{k=1}^m e_k$$
-				 then
-				$$ cost(p_i) = \sum_{k=1}^{m} cost(e_k) $$
-			 \\
-				\specialrule{0em}{2pt}{2pt}
-				$r_{i}$ & A route identified by $i$.\\
-				\specialrule{0em}{2pt}{2pt}
-				$head(p_i)$ & The start vertex of path $p_i$.\\
-				\specialrule{0em}{2pt}{2pt}
-				$end(p_i)$ & The end vertex of path $p_i$.\\
-				\specialrule{0em}{2pt}{2pt}
-				$e(v_i,v_j)$ & An edge $e_{ij}$ satisfying
-				 $$head(e_{ij})=v_i, tail(e_{ij})=v_j$$
-				When using term $e(v_i,v_j)$, it is guarantee that such edge exists. \\
-				\specialrule{0em}{2pt}{2pt}
-				$head(r_i)$ & Given $$r_i = \bigcup\limits_{k=1}^{m}e_k$$
-				then $$head(r_i)=head(e_1)$$ \\
-				\specialrule{0em}{2pt}{2pt}
-				$tail(r_i)$ & Given $$r_i = \bigcup\limits_{k=1}^{m}e_k$$
-				then $$head(r_i)=head(e_m)$$ \\
-				\specialrule{0em}{2pt}{2pt}
-				$cost(r_i)$ & Given $$r_i = \bigcup\limits_{k=1}^{m}e_k$$
-				then
-				\begin{equation}
-					cost(r_i)=
-					\left\{
-					\begin{aligned}
-						& {
-						\begin{aligned}
-							&\text{if $m=1$ then:}\\
-							&\qquad cost(p(v_d,head(r_i))) \\
-							&\qquad + cost(e(head(r_i),tail(r_i)))\\
-							&\qquad + cost(p(tail(r_i),v_d))
-						\end{aligned}
-					}
-					\\
-					& {
-						\begin{aligned}
-							& \text{if $m\neq1$ then:}\\
-							&\qquad cost(p(v_d,head(r_i))) \\
-							&\qquad + \sum_{k=1}^{m-1} cost(p(tail(e_k),head(e_{k+1}))) \\
-							&\qquad + \sum_{k=1}^{m} cost(e_k)\\
-							&\qquad + cost(p(tail(r_i),v_d))
-						\end{aligned}
-					}
-					\\
-					\end{aligned}
-					\right.
-				\nonumber
-				\end{equation}
-				\\
-				\specialrule{0em}{2pt}{2pt}
-				$R$ & $$R=\bigcup\limits_{k=1}^{m}{r_k}$$ 
-				$R$ consists of many routes. $m$ is the number of routes in $R$, is an attribute rather than a known requirement. $R$ is also called ``routes'' in natural language in this paper. \\
-				\specialrule{0em}{2pt}{2pt}
-				$R_i$ & A ``routes" identified by $i$ \\
-				\specialrule{0em}{2pt}{2pt}
-				$cost(R_i)$ & Given $R=\bigcup\limits_{k=1}^{m}{r_k}$,then 
-				 $$cost(R_i)=\sum_{k=1}^m cost(r_k)$$  \\
-				\bottomrule
-			\end{tabular}
-		\label{formulation term 2}
-		\end{center}
-	\end{table}
-
-	\begin{table}[H]
-		\begin{center}
-			\caption{Notations for formulation, part 3}
-			\begin{tabular}{m{1cm}<{\centering}|m{6cm}}
-				\toprule
-				\textbf{Term} & \textbf{Explanation} \\
-				\midrule
-				\specialrule{0em}{2pt}{2pt}
-				$d$ & Number of vehicles in CARP\\
-				\specialrule{0em}{2pt}{2pt}
-				$h$ & A vehicle \\
-				\specialrule{0em}{2pt}{2pt}
-				$h_i$ & The $i_{th}$ vehicle among all vehicles, satisfying 
-				$$ \left\{
-				\begin{aligned}
-					& i \in \mathbb{N} \\
-					& i \in [1,d] 
-				\end{aligned}
-				\right.  $$ \\
-				\specialrule{0em}{2pt}{2pt}
-				$x(e_i,r_i)$ & Number of timse that edge $e_i$ appears in route $r_j$.\\
-				\specialrule{0em}{2pt}{2pt}
-				$y(e_i,R_j)$ & Number of times that edge $e_i$ appears in routes $R_j$.
-				Given $$R_j=\bigcup\limits_{k=1}^{m}{r_k}$$
-				then 
-				$$ y(e_i,R_j)=\sum_{k=1}^{m} x(e_i,r_k) $$ \\
-				\specialrule{0em}{2pt}{2pt}
-				$v$ & A vertex\\
-				\specialrule{0em}{2pt}{2pt}
-				$v_i$ & A vertex identified by $i$.\\
-				\specialrule{0em}{2pt}{2pt}
-				\makecell{$in(e')$\\$out(e')$}&
-				Given an undirect edge $e'$, randomly choose one of its vertices as $v_1$, regard another vertex as $v_2$. Then 
-				$$in(e')=e(v_1,v_2),out(e')=e(v_2,v_1)$$ \\
-				\specialrule{0em}{2pt}{2pt}
-				$E_{dmd}$ & The set of all edges with positive demand in $G$.
-				$$ E_{dmd}=\{e_i' \in E\ |\ dmd(e_i')>0\} $$ \\
-				\specialrule{0em}{2pt}{2pt}
-				$R_{min}$ & The routes with minimal cost among all satisfied routes. This is the searching purpose of CARP.\\
-				\bottomrule
-			\end{tabular}
-		\label{formulation term 3}
-		\end{center}
-	\end{table}
-
-	The purpose of this project is to find routes $R_{min}$ to minimize $cost(R_{min})$ while satisfying the following condition:
-	
-	$$
-	\forall e' \in E_{dmd}, y(in(e'),R_{min})+y(out(e'),R_{min})=1
-	$$
-	
-	
-	\subsection{Notations in methodology}
-	
-	Detailed methodology of solution will be shown in \ref{Methodology}, following terms are introduced to clarify the explanation. All other letters in below table are just simple variables.
-	
-		\begin{table}[H]
-		\begin{center}
-			\caption{Notations for formulation}
-			\begin{tabular}{m{1.4cm}<{\centering}|m{5.6cm}}
-				\toprule
-				\textbf{Term} & \textbf{Explanation} \\
-				\midrule
-				$mini(v_i,v_j)$ & The minimal cost between two vertices $v_i$ and $v_j$. Can be calculated by Dijkstra or Floyd \\
-				\specialrule{0em}{2pt}{2pt}
-				$copy(x)$ & A function, deepcopy $x$ and return copy \\
-				\specialrule{0em}{2pt}{2pt}
-				$load$ & The demand has handled in route at certain point \\
-				\bottomrule
-			\end{tabular}
-		\end{center}
-	\end{table}
-	
-	
-	\section{Methodology}\label{Methodology}
-	
-	The main idea of solution is to use Genetic Algorithm.There is already an algorithm called ``Path Scanning (PS)'' to find a legal solution to CARP problem. In this algorithm, total six judging rules on PS and random sorting are used to generate various initial population. In the process of generating next generation, five mutations will be used: flip, single insertion, double insertion, swap, and 2-opt. Mutated solutions will mix with new population, then be filtered through legal detection.
-	
-	
-	
-	\subsection{Initial Population}
-	
-	PS is an algorithm start at depot vertex, then find the minimal-cost vertex which follows capacity limitation as its next vertex. Then continue to do this until capacity is full or no such vertex exist, as shown in Algorithm \ref{alg:PS}. $better()$ is one of judging rules, will be explained in \ref{Judging Rules}.
-	
-	\begin{algorithm}[htbp]
-		\caption{path\_scanning}\label{alg:PS}
-		\begin{algorithmic}
-			\Require An integer $i$, appoint judging rule;
-			\Ensure A legal routes;
-			\newline
-			\State $routes$ $\gets$ empty list
-			\State $free$ $\gets$ all vertices
-			\While{$free$ isn't empty}
-				\State $route \gets$ empty list
-				\State $v_{start} \gets v_d$
-				\While{$free$ is not empty or $d_{min} \neq \inf$}
-					\State $e_{min} \gets$ empty list
-					\State $free\_ \gets copy(free)$
-					\For{$\forall e_i \in free\_$}
-						\If{$cost(e_i) + dmd(e_i) \leq cap$}
-							\If{$mini(i, head(e_i)) < d_{min}$)}
-								\State $e_{min} \gets e_i$
-								\State $d_{min} \gets min(i, head(e_i))$
-							\ElsIf{$better(e_i,e_{min})$ and $d_{min} = mini(i, head(e_i))$}
-								\State $e_{min} \gets e_i$
-								\State $d_{min} \gets min(i, head(e_i))$
-							\EndIf
-						\EndIf
-					\EndFor
-					\State append $e_{min}$ in $route$
-					\State remove $e_{min}$ from $free\_$
-				\EndWhile
-				\State append $route$ in $routes$
-			\EndWhile
-			\Return $routes$
-		\end{algorithmic}
-	\end{algorithm}
-
-	Further detail, two mini-distance algorithm and six judging rules are applied.
-	
-	\subsubsection{Preparation}
-	\ 
-	\indent
-	
-	To use PS, minimal distance between any pair of vertices need to be calculated for preparation. Two candidates algorithm are Dijkstra and Floyd.
-	
-	In theory, Dijkstra is the most efficiency algorithm with infinite big graph. However, in this project, the small sample graph only contains 20+ vertices, the most big graph only contains few hundreds vertices. Time limitation for total runtime is at least 60 seconds. In the scale of so little graph and relatively so long time, theory time complexity is not reliable. Since using more complex data structure, Dijkstra may become even slower than another algorithm, Floyd. 
-	
-	Therefore, in this project, both Dijkstra and Floyd are considerable and reasonable.
-	
-	\subsubsection{Judging Rules}\label{Judging Rules}
-	\ 
-	\newline
-	\indent
-	Total six judging rules are used when two vertex have same cost in Algorithm \ref{alg:PS}, summarized as follows in Algorithm \ref{alg:judging rules}.
-	
-	\begin{algorithm}[htbp]
-		\caption{better}\label{alg:judging rules}
-		\begin{algorithmic}
-			\Require An integer $i$, appoint judging rule; old edge $e_{old}$, new edge $e_{new}$
-			\Ensure Boolean value, whether $e_{new}$ is better than $e_{old}$;
-			\newline
-			\If{$i = 1$}
-			\State Rule 1: choose edge with larger $mini(head(e),v_d)$
-			\ElsIf{$i = 2$}
-			\State Rule 2: choose edge with fewer $mini(head(e),v_d)$
-			\ElsIf{$i = 3$}
-			\State Rule 3: choose edge with larger $\frac{dmd(e)}{cost(e)}$
-			\ElsIf{$i = 4$}
-			\State Rule 4: choose edge with fewer $\frac{dmd(e)}{cost(e)}$
-			\ElsIf{$i = 5$}
-			\State Rule 5: 
-				\If{$load < \frac{cap}{2}$} 
-				\State use Rule 1
-				\Else 
-				\State use Rule 2
-				\EndIf
-			\Else
-			\State Rule 6: randomly pick one edge
-			\EndIf
-		\end{algorithmic}
-	\end{algorithm}
-
-	Using different judging rules, even the same order of traversing edges may results in different routes, increasing complexity in initial population of GA.
-
-	\subsubsection{Component}
-	\ 
-	\newline
-	\indent
-	Since can't ensure which rule is best, all of rules above are used and occupy same size of part in population for fairness, and each rule will generate $\frac{1}{6}$ part of population. However, the randomly generated solution may be bad, so six times of required $\frac{1}{6}$ population number will be generated, and the best $\frac{1}{6}$ of them will be picked into initial population.
-
-	\subsection{Mutations}
-	
-	In each iteration of GA, old population will mutate and results in some new solution. The idea is to do several changes on current legal solution, like insertion and switching. Total five ways of mutations are used as follows.
-	
-	\subsubsection{Flip}
-	
-	``Flip'' is, randomly select a route in one solution, then randomly select an edge in this route. Then change the direction of this edge in the route.
-	
-	\subsubsection{Single insertion}
-	
-	``Single Insertion'' is, randomly choose an edge in a randomly chosen route, then delete this edge in its route, and randomly pick a vertex in all edges, including edges in route that the edge itself locates and edges in all other routes. Finally, insert the deleted edge at the end of chosen vertex.
-	
-	\subsubsection{Double insertion}
-	
-	``Double insertion'' is similar to ``single insertion'', except that single insertion only delete one random edge and insert into a randomly chosen location, but double insertion will delete two adjacent edges at the same time and insert these two edges in a randomly chosen location.
-	
-	\subsubsection{Swap}
-	
-	``Swap'' is, find two different edges randomly, then exchange these two edges' position while not changing their direction.
-	
-	\subsubsection{2-opt}
-	
-	The idea of ``2-opt'' is shown as follows:
-	
+	In the paper\cite{AOD}, a hierarchical CNN model is builded to detect objects in archaeological sites
+	using digital terrain models (DTMs) generated from ALS data. 
+	The	data is acquired from the Harz mining Region in Lower Saxony, where a high density of different
+	archaeological monuments including the UNESCO world heritage site Historic Town of Goslar,
+	Mines of Rammelsberg, and the Upper Harz Water Management System can be found. Objects to be detected are archaeological
+	objects such as hollow ways, streams, pathways, lakes, streets, ditches, heaps, mining shafts,
+	and more, but for this study, the model is fit to detect 4 classes of objects: natural streams, lakes, tracks, and an 'others' class
+	which represents the rest of the objects for which enough labeled data is not available yet. To
+	compare and validate the method in this paper, some experiments on the same data set using two existing
+	deep learning models were conducted. The first model is VGG-16; an image classification network pretrained
+	on ImageNet data. The second model is a stacked autoencoders model. The results of the
+	classification as analyzed in this paper show that our model is suitably tuned for this task as it
+	achieves the best classification accuracy of around 91 percent, compared to 88 percent and 82
+	percent accuracy by the pretrained and stacked autoencoders models, respectively.
 	\begin{figure}[htbp]
 		\centering
-		\begin{minipage}{0.49\linewidth}
-			\centering
-			\includegraphics[width=0.9\linewidth]{./picture/1.png}
-			\caption{Initial two route}
-			\label{2opt 1}%文中引用该图片代号
-		\end{minipage}
-		\begin{minipage}{0.49\linewidth}
-			\centering
-			\includegraphics[width=0.9\linewidth]{./picture/2.png}
-			\caption{Cut route}
-			\label{2opt 2}%文中引用该图片代号
-		\end{minipage}
-		%\qquad
-		%让图片换行，
-		
-		\begin{minipage}{0.49\linewidth}
-			\centering
-			\includegraphics[width=0.9\linewidth]{./picture/3.png}
-			\caption{Reproduced route 1}
-			\label{2opt 3}%文中引用该图片代号
-		\end{minipage}
-		\begin{minipage}{0.49\linewidth}
-			\centering
-			\includegraphics[width=0.9\linewidth]{./picture/4.png}
-			\caption{Reproduced route 2}
-			\label{2opt 4}%文中引用该图片代号
-		\end{minipage}
-	\end{figure}
+		\includegraphics[width=1.0\linewidth]{./picture/fig7.png}
+		\caption{Heat maps using filter size 48 x 48. Colors show the confidence of the models in detecting
+		objects at that location.}
+	  \end{figure}
+	  \begin{figure}[htbp]
+		\centering
+		\includegraphics[width=1.0\linewidth]{./picture/fig8.png}
+		\caption{Heat maps using filter size 98 x 98. Colors show the confidence of the models in detecting
+		objects at that location.}
+	  \end{figure}
 
-	First randomly select two route as shown in Figure \ref{2opt 1}, written as $A$ and $B$. Then randomly choose a vertex on both edge, and cut edge into two parts as in Figure \ref{2opt 2}, where $A_1$ and $B_1$ contains start vertex, $A_2$ and $B_2$ contains end vertex. Then we have two ways to re-connect these four parts while maintain each reproduced edge have one start and one end: $A_1$ connects $B_2$ and $A_2$ connects $B_1$ in Figure \ref{2opt 3}, or $A_1$ connects reversed $B_1$ and reversed $A_2$ connects $B_2$ in Figure \ref{2opt 4}.
+	\subsection{More}
 
-	\subsection{Selection}
+	We believe that there are many other studies using RNNs to study the meaning of certain patterns on ancient artifacts or to try to decipher ancient texts.
+	But this is out of the scope of our survey.
 	
-	In this project, crossover is not considered. The new solution after mutation may be illegal, so a filter needs to be used to delete illegal solution, like exceed capacity limit. In the worst case, all of new solutions are illegal. So the process of generate initial population will repeat again. The next population will be select among mixed solutions from both process of initial population and from mutation. 
+	\section{A detailed classification}
 	
 
-	\section{Experiment}\label{sec:experiment}
-	
-	After completing algorithm, some experiments needs to be done to ensure the optimization to algorithm works well, and to find out which parameter is better in practice. Here, each optimization is compared with random decision.
-	
-	\subsection{Setup}
-	
-	All experiments are implemented on following environment:
-	
-	\begin{table}[H]
-		\begin{center}
-			\caption{Experimental environment}
-			\begin{tabular}{cp{6cm}}
-				\toprule
-				\textbf{Item} & \textbf{Configuration} \\
-				\midrule
-				Processor & AMD Ryzen 7 4800H with Radeon Graphics \\
-				\specialrule{0em}{2pt}{2pt}
-				RAM & 16.0GB\\
-				\specialrule{0em}{2pt}{2pt}
-				System & 64bit operation systen based on x64 processor \\
-				\specialrule{0em}{2pt}{2pt}
-				Operation system & Windows 10 Family Chinese Version, with version code 22H2 \\
-				\specialrule{0em}{2pt}{2pt}
-				OS inner version & 19045.2311 \\
-				\specialrule{0em}{2pt}{2pt}
-				IDE & Pycharm Professional 2022.3 \\
-				\specialrule{0em}{2pt}{2pt}
-				Python & 3.10 version \\
-				\specialrule{0em}{2pt}{2pt}
-				$numpy$ package & 1.21.5 version \\
-				\bottomrule
-			\end{tabular}
-		\end{center}
-	\end{table}
-	
-	\subsection{Test data}
-	
-	The graph for testing are as follows:
-	
-	\begin{table}[H]
-		\begin{center}
-			\caption{Testing graphs}
-			\begin{tabular}{cccc}
-				\toprule
-				\textbf{Graph} & \textbf{Vertex number} & \textbf{Edge number} & \textbf{Demand edge number}\\
-				\midrule
-				egl-e1-A &$77$&$98$&$51 $\\
-				\specialrule{0em}{2pt}{2pt}
-				egl-s1-A &$ 140$&$190$&$75 $\\
-				\specialrule{0em}{2pt}{2pt}
-				gdb1 &$ 12$&$22$&$22 $\\
-				\specialrule{0em}{2pt}{2pt}
-				gdb10 &$ 12$&$25$&$25 $\\
-				\specialrule{0em}{2pt}{2pt}
-				val1A &$ 24$&$39$&$39 $\\
-				\specialrule{0em}{2pt}{2pt}
-				val4A &$ 41$&$69$&$69 $\\
-				\specialrule{0em}{2pt}{2pt}
-				val7A &$ 40$&$66$&$66 $\\
-				\bottomrule
-			\end{tabular}
-		\end{center}
-	\end{table}
-	
-	\subsection{Results}
-	
-	In experiments, flip, single insertion, double insertion, swap, 2-opt are run separately and compared with random selection on each decision in PS. Each competition for each mutation way is run for 100 times, 100 iteration of GA is run in each time. The number of winning and the improve percentage of average cost for each mutation way are shown in Table \ref{result}.
-	
-	All mutation way can reach global optimal cost for graph val1A, val4A, and val7A. If reach optimal cost, limit of mutation can't be observed. So all experiments are run on a relatively large graph: egl-e1-A.
-	
-	In experiments, the parameter of GA doesn't change for each competition. The parameter used is the final version of adjust. The method of adjust will be explained in 
-	
-	\begin{table}[H]
-		\begin{center}
-			\caption{Result of mutations $vs$ random}\label{result}
-			\begin{tabular}{cccc}
-				\toprule
-				\textbf{Mutation} & \textbf{\makecell{Mutation\\win}} & \textbf{\makecell{Random\\win}} &  \textbf{\makecell{Cost\\improve}} \\
-				\midrule
-				Flip &$99$&$1$&$5.256\%$\\
-				\specialrule{0em}{2pt}{2pt}
-				\makecell{Single\\insertion} &$ 100$&$0$&$13.773\%$\\
-				\specialrule{0em}{2pt}{2pt}
-				\makecell{Double\\insertion} &$ 100$&$0$&$16.481\%$\\
-				\specialrule{0em}{2pt}{2pt}
-				\makecell{Swap} & $ 99$&$1$&$19.326\%$ \\
-				\specialrule{0em}{2pt}{2pt}
-				\makecell{2-opt}&$ 100$&$0$&$14.433\%$ \\
-				\bottomrule
-			\end{tabular}
-		\end{center}
-	\end{table}
+	% needed in second column of first page if using \IEEEpubid
+	%\IEEEpubidadjcol
 
-	It can be seen that all of mutations can reach better solution than random chosen algorithm. Although random algorithm do win a few times, but consider the large number of experiments, it can be concluded that mutation is better than random under considerable error rate.
-	
-	\subsection{Adjust parameter}\label{adjust}
-	
-	There are some parameters in GA:
-	
-	\begin{itemize}
-		\item Size of population
-		\item One single solution is selected from how many solutions in process of initial population.
-		\item How many solutions from process of initial population accounts in each generation of population
-		\item How many solutions from mutation in each generation of population.
-		\item How much time a single mutation way perform on a single route
-		\item How many solutions are used for each mutation way.
-	\end{itemize}
+	\section{future}
 
-	All the parameters are adjusted by hand. That is, following sense to assign a initial value for each parameter, then run GA on large graph like egl-e1-A for multiple times. Observe the output of each time to determine whether this parameter is better than the previous one.
+	Nowadays, archaeologists utilize AI in many ways, from creating 3D models of historical sights
+	to scanning territories with a laser radar to find ancient graves or from matching and
+	assembling pairs of ancient papyrus fragments containing mostly unknown scripture to detecting
+	objects in archaeological sites using DTMs generated from ALS data. There is no denying that 
+	AI becomes more and more popular in the field of archaeology and plays an important role in it.
 
-	
+	One direction for the future development of intelligent archaeology is helping archaeologists' work.
+	For example, archaeologists often face such problems as not knowing where exactly to dig. 
+	They can define the region but not the exact place where an artifact or a grave lies. 
+	It's when the neural network comes in line. Instead of looking through millions of documents by themselves, 
+	archaeologists pass this work to neural networks. This technology can sort out information by utilizing a 
+	specific algorithm. By analyzing images, this system might not only direct archaeologists in their 
+	groundworks but also suggest territories that have similar patterns as potential objects for excavations.
+
+	However, knowing that many ML systems --- especially deep neural networks --- are essentially considered black boxes.
+	This makes it hard to understand and explain the results given by a model. Because of this, it should be noted that AI does not 
+	replace the need for experts in archaeology. Instead, AI technology needs the expertise from archaeologists to improve itself and 
+	to judge the correctness of the results.
+
+	Another direction is to strengthen the identification of the artifacts.
+	In our world, one of the most urgent problems in archaeology is the fact that
+	many artifacts are traded on the dark web. Although 
+	many models trained in this direction have achieved 
+	quite good results, they are not yet ready to be 
+	applied in practice. Currently, the majority of 
+	detection operations are performed manually.
+	If an AI can succeed in this direction, it would 
+	make an extraordinary contribution to the prevention of 
+	art-related illegal activities.
+
+	We expect that in the future, artificial intelligence technology will play an increasing, even irreplaceable role in the field of archaeology.
 	
 	% An example of a floating figure using the graphicx package.
 	% Note that \label must occur AFTER (or within) \caption.
@@ -1130,32 +781,6 @@
 	% Note that, LaTeX2e, unlike IEEE journals/conferences, places
 	% footnotes above bottom floats. This can be corrected via the
 	% \fnbelowfloat command of the stfloats package.
-	
-	
-	\section{Failed Attempts}
-	
-	In process of project, more methods are done to optimize algorithm. Due to various reasons, part of them failed.
-	
-	\subsection{Multiple insertion}
-	
-	This idea is inspired by ``double insertion''. Choose two different vertices in one randomly chosen route, cut off edges between these vertices, and insert into randomly chosen position among all routes.  
-	
-	In theory, multiple insertion is an extension of double insertion and single insertion, so its most optimal cost is better than single insertion and double insertion. However, after programming and test, it turns out that, possibility of better solution is too small that can be ignored.
-	
-	The problem is that, multiple insertion is ``too wide''. After some math calculation, even if only do multiple insertion one time at route, the mathematical expectation of changed edges is half of the whole route. That means, in more than 70\% percent of cases, the too long cut-down will make route it from and route it insert into illegal, just a waste of time.
-	
-	If time is infinite for each graph, then multiple insertion theoretically will get better answer than single insertion and double insertion. But because time limitation of this project, multiple insertion is not suitable.
-	
-	\subsection{PS-PT}
-	
-	A paper\cite{inproceedings} in 2022 October introduce a method combining Path Scanning and Partial Tour Building called ``PS-PT''.
-	
-	In summary, this method will preprocess whole graph, combine some edges with tiny demand into a large edge. And use this large edge to replace its component edges in original graph, so that these component edges are force to be traversed at same time during PS on edited graph. In paper, this method can obtain most optimal answer in 20\% to even 40\% cases.
-	
-	However, after two days of attempts and test, it is found that PS-PT can't be used. This project require to calculate cost on routes. And the cost is base on original graph, so graph itself can't be manipulated to keep demand function and cost function correct. If do Dijkstra or Floyd on original graph and calculate demand in edited graph, then all path passing edited edges will correct demand but incorrect cost. So this method isn't used in project.
-	
-	\section{Conclusion}
-	Path Scanning based on six judging rules generate initial population in this project, each iteration mutate old population and select best solutions on new generation and mutated results in five ways. All mutations are proven to be better than random.
 	
 	
 	

@@ -5,12 +5,6 @@
 \newblock Machine learning based assembly of fragments of ancient papyrus.
 \newblock {\em J. Comput. Cult. Herit. 14}, 3 (jul 2021).
 
-\bibitem{inproceedings}
-{\sc Bensedira, B., Layeb, A., and Zendaoui, Z.}
-\newblock A partial tours based path-scanning heuristic for the capacitated arc
-  routing problem.
-\newblock pp.~1--6.
-
 \bibitem{bickler_2021}
 {\sc Bickler, S.~H.}
 \newblock Machine learning arrives in archaeology.
@@ -21,11 +15,6 @@
 \newblock Underwater photogrammetry for archaeology- the venus project
   framework.
 \newblock In {\em GRAPP\/} (2018).
-
-\bibitem{CARP}
-{\sc Golden, B.~L., and Wong, R.~T.}
-\newblock Capacitated arc routing problems.
-\newblock {\em Networks 11}, 3 (1981), 305--315.
 
 \bibitem{heritage4010008}
 {\sc Gualandi, M.~L., Gattiglia, G., and Anichini, F.}
@@ -39,30 +28,33 @@
   using a multi-scale approach and machine learning techniques.
 \newblock {\em Remote Sensing 10}, 2 (2018).
 
+\bibitem{HuXiangyun2016DCfD}
+{\sc Hu, X., and Yuan, Y.}
+\newblock Deep-learning-based classification for dtm extraction from als point
+  cloud.
+\newblock {\em Remote sensing (Basel, Switzerland) 8}, 9 (2016), 730--730.
+
 \bibitem{Syrian_images}
 {\sc Karterouli, K., and Batsaki, Y.}
 \newblock Ai and cultural heritage image collections: Opportunities and
   challenges.
 
-\bibitem{KUHL1982236}
-{\sc Kuhl, F.~P., and Giardina, C.~R.}
-\newblock Elliptic fourier features of a closed contour.
-\newblock {\em Computer Graphics and Image Processing 18}, 3 (1982), 236--258.
+\bibitem{AOD}
+{\sc Kazimi, B., Thiemann, F., Malek, K., Sester, M., and Khoshelham, K.}
+\newblock Deep learning for archaeological object detection in airborne laser
+  scanning data.
 
-\bibitem{MEBATSION201263}
-{\sc Mebatsion, H., Paliwal, J., and Jayas, D.}
-\newblock Evaluation of variations in the shape of grain types using principal
-  components analysis of the elliptic fourier descriptors.
-\newblock {\em Computers and Electronics in Agriculture 80\/} (2012), 63--70.
+\bibitem{CeramicFabric}
+{\sc Lyons, M.}
+\newblock Ceramic fabric classification of petrographic thin sections with deep
+  learning.
+\newblock {\em Journal of Computer Applications in Archaeology 4\/} (09 2021),
+  188.
 
-\bibitem{1962Graphic}
-{\sc Mei, K.~K.}
-\newblock Graphic programming using odd or even points.
-\newblock {\em Chinese Mathematics 1\/} (1962), 263--266.
-
-\bibitem{RPP}
-{\sc Orloff, C.~S.}
-\newblock A fundamental problem in vehicle routing.
-\newblock {\em Networks 4}, 1 (1974), 35--64.
+\bibitem{PawlowiczLeszekM.2021Aodl}
+{\sc Pawlowicz, L.~M., and Downum, C.~E.}
+\newblock Applications of deep learning to decorated ceramic typology and
+  classification: A case study using tusayan white ware from northeast arizona.
+\newblock {\em Journal of archaeological science 130\/} (2021), 105375--.
 
 \end{thebibliography}

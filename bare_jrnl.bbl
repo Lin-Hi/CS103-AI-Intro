@@ -1,4 +1,9 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Papyrus}
+{\sc Abitbol, R., Shimshoni, I., and Ben-Dov, J.}
+\newblock Machine learning based assembly of fragments of ancient papyrus.
+\newblock {\em J. Comput. Cult. Herit. 14}, 3 (jul 2021).
 
 \bibitem{inproceedings}
 {\sc Bensedira, B., Layeb, A., and Zendaoui, Z.}
@@ -6,10 +11,49 @@
   routing problem.
 \newblock pp.~1--6.
 
+\bibitem{bickler_2021}
+{\sc Bickler, S.~H.}
+\newblock Machine learning arrives in archaeology.
+\newblock {\em Advances in Archaeological Practice 9}, 2 (2021), 186–191.
+
+\bibitem{Drap2018UnderwaterPF}
+{\sc Drap, P., Scaradozzi, D., Gambogi, P., and Gauch, F.}
+\newblock Underwater photogrammetry for archaeology- the venus project
+  framework.
+\newblock In {\em GRAPP\/} (2018).
+
 \bibitem{CARP}
 {\sc Golden, B.~L., and Wong, R.~T.}
 \newblock Capacitated arc routing problems.
 \newblock {\em Networks 11}, 3 (1981), 305--315.
+
+\bibitem{heritage4010008}
+{\sc Gualandi, M.~L., Gattiglia, G., and Anichini, F.}
+\newblock An open system for collection and automatic recognition of pottery
+  through neural network algorithms.
+\newblock {\em Heritage 4}, 1 (2021), 140--159.
+
+\bibitem{rs10020225}
+{\sc Guyot, A., Hubert-Moy, L., and Lorho, T.}
+\newblock Detecting neolithic burial mounds from lidar-derived elevation data
+  using a multi-scale approach and machine learning techniques.
+\newblock {\em Remote Sensing 10}, 2 (2018).
+
+\bibitem{Syrian_images}
+{\sc Karterouli, K., and Batsaki, Y.}
+\newblock Ai and cultural heritage image collections: Opportunities and
+  challenges.
+
+\bibitem{KUHL1982236}
+{\sc Kuhl, F.~P., and Giardina, C.~R.}
+\newblock Elliptic fourier features of a closed contour.
+\newblock {\em Computer Graphics and Image Processing 18}, 3 (1982), 236--258.
+
+\bibitem{MEBATSION201263}
+{\sc Mebatsion, H., Paliwal, J., and Jayas, D.}
+\newblock Evaluation of variations in the shape of grain types using principal
+  components analysis of the elliptic fourier descriptors.
+\newblock {\em Computers and Electronics in Agriculture 80\/} (2012), 63--70.
 
 \bibitem{1962Graphic}
 {\sc Mei, K.~K.}

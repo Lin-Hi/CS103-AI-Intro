@@ -1,5 +1,12 @@
 \begin{thebibliography}{10}
 
+\bibitem{ANICHINI2021102788}
+{\sc Anichini, F., Dershowitz, N., Dubbini, N., Gattiglia, G., Itkin, B., and
+  Wolf, L.}
+\newblock The automatic recognition of ceramics from only one photo: The
+  archaide app.
+\newblock {\em Journal of Archaeological Science: Reports 36\/} (2021), 102788.
+
 \bibitem{Anichini2018BigAD}
 {\sc Anichini, F., and Gattiglia, G.}
 \newblock Big archaeological data. the archaide project approach.
@@ -9,6 +16,13 @@
 \newblock A partial tours based path-scanning heuristic for the capacitated arc
   routing problem.
 \newblock pp.~1--6.
+
+\bibitem{first_phase}
+{\sc Berlin, A., Ettlinger, E., Hedinger, B., Hoffmann, B., Kenrick, P., Pucci,
+  G., Roth-Rubi, K., Schneider, G., Schnurbein, S., Wells, C., and
+  Zabehlicky-Scheffenegger, S.}
+\newblock Conspectus formarum terrae sigillatae italico modo confectae.
+\newblock {\em American Journal of Archaeology 96\/} (01 1992), 190.
 
 \bibitem{bickler_2021}
 {\sc Bickler, S.~H.}
@@ -21,6 +35,13 @@
   traditional knowledge improves landscape archaeology—a case from southwest
   madagascar.
 \newblock {\em Geosciences 10}, 8 (2020).
+
+\bibitem{Dellepiane2017FromPT}
+{\sc Dellepiane, M., Callieri, M., Banterle, F., Arenga, D., Zallocco, M., and
+  Scopigno, R.}
+\newblock From paper to web: Automatic generation of a web-accessible 3d
+  repository of pottery types.
+\newblock In {\em GCH\/} (2017).
 
 \bibitem{2019_challenge}
 {\sc Douglass, K., Quintana~Morales, E., Manahira, G., Fenomanana, F., Samba,
@@ -59,9 +80,23 @@
 \newblock Graphic programming using odd or even points.
 \newblock {\em Chinese Mathematics 1\/} (1962), 263--266.
 
+\bibitem{CERAMALEX}
+{\sc Michael~Heinzelmann, Marianne~Bergmann, J.-Y. E. P.~B.}
+\newblock Ceramalex - ancient pottery in alexandria and its chora.
+\newblock
+  \url{https://archaeologie.phil-fak.uni-koeln.de/en/research/research-projects/finished/ceramalex-ancient-pottery-in-alexandria-and-its-chora},
+  2022.
+
 \bibitem{RPP}
 {\sc Orloff, C.~S.}
 \newblock A fundamental problem in vehicle routing.
 \newblock {\em Networks 4}, 1 (1974), 35--64.
+
+\bibitem{Roman_Amphorae}
+{\sc Service, A.~D.}
+\newblock Roman amphorae: A digital resource.
+\newblock
+  \url{https://archaeologydataservice.ac.uk/archives/view/amphora_ahrb_2005/},
+  2022.
 
 \end{thebibliography}

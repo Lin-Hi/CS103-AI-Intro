@@ -496,7 +496,109 @@
 	
 	\section{Application}\label{application}
 	
-	\section{Classic example}\label{example}
+	\section{ArchAIDE Project}\label{example}
+	
+	To make things clear, a classic and mature classification project is briefly shown in this part. The reason why classification is chosen rather than searching sites is that, the number of paper about classification is much more than searching area. Among all applications in paper, the most classic and the most mature one is picked out here. 
+	
+	The name of project introduced here is ``ArchAIDE''. The most remarkable characteristic of this project is that, it not only invent algorithm and do analysis on data from both view of shape and decorations, but also realize a system that could have a realworld implementation. 
+	
+	\subsection{General Introduction}
+	
+	ArchAIDE project aims at optimizing the ceramic identification process. It developed two different deep neural networks to recognize pottery through images using a mobile device.The first network is specially used for image recognition, also called appearance-based recognition. The second network uses the shape of fragmentation to identify. 
+	
+	Unlike familiar worries about AI, ArchAIDE will not replace the knowledge of domain specialists. On the contrary, it put archaeologists' role in the center of decision-making process in the identification workflow, which can be seen in \ref{method}.
+	
+	\subsection{Materials}
+	
+	A correct result of classification relies on two parts: the label or the name of each category, and the available data for both shape-based and appearance-based recognition. But first, the class of relics should be determined.
+	
+	\subsubsection{Classes for training}
+	\ 
+	
+	Among all categories of cultural relics, the project choose four realworld classes for training:
+	
+	\begin{itemize}
+		\item Amphorae manufactured throughout the Roman world between the late 3rd century BCE and the early 7th century CE. (Figure \ref{roman})
+		\item Roman Terra Sigillata manufactured in Italy , Spain, and South Gaul between the 1st century BCE and the 3rd century CE.
+		\item Majolica produced in Montelupo Fiorentino (Italy) between 14th and 18th century.
+		\item medieval and post-medieval Majolica from Barcelona and Valencia. (Figure \ref{majolica})
+	\end{itemize}
+	
+	\begin{figure}[htbp]%
+		\centering
+		\subfloat[Roman amphorae]{
+			\label{roman}
+			\includegraphics[width=0.45\linewidth]{./picture/material1.png}
+		}\hfill
+		\subfloat[Majolica of Montelupo Fiorentino]{
+			\label{majolica}
+			\includegraphics[width=0.45\linewidth]{./picture/material2.png}
+		}
+		\caption{Material for training}
+		\label{2figs}
+	\end{figure}
+
+	\subsubsection{Label}
+	\ 
+	
+	To get correct and helpful label of categories, the project implements following systems:
+	
+	\begin{itemize}
+		\item A digital comparative collection for pottery types, decorations, and stamps, combining digital collections, digitised paper catalogues, and data acquired through photo campaigns.
+		\item A semi-automated system for paper catalogues’ digitisation.
+		\item A multilingual thesaurus of descriptive pottery terms, mapped to the Getty Art and Architecture Thesaurus, which includes French, German, Spanish, Catalan, Portuguese, English, and Italian.		
+	\end{itemize}
+
+	The digital collections and paper catalogues to create digital comparative collections are from already-present databases. 
+	
+	The first one is ``Roman Amphorae: a digital resource''\cite{Roman_Amphorae}, created by Simon Keay and David Williams of the University of Southampton and published as open data on the Archaeology Data Service, that includes the principal types of roman amphorae between the late 3rd century BCE and the early 7th century CE. The other one is “CERAMALEX” database\cite{CERAMALEX}, a proprietary database of the German and French Heritage 2021.
+
+	Limited by space, detailed principles of them will not be shown here.
+
+	\subsubsection{Training images}
+	\ 
+	
+	Multiple photo campaigns were also carried out in several archaeological warehouses, involving more than 30 different institutions in Austria, Italy , and Spain. Overall, 3498 sherds were photographed for training the shape-based recognition model. For appearance-based recognition, a dataset of 13,676 pictures was collected through multiple photography campaigns.
+	
+	To offset disadvantages above in some term, each original image is scaled into four different sizes. On each scaled image, three versions are created: unflipped, horizontally flipped, and vertically flipped. All of these images are cropped, leaving just the central square. As a result, 12 images from each original one were obtained.
+	
+	
+	\subsection{Method}\label{method}
+	
+	The decoration of pottery fragments have higher priority than shape because decorations is more reliable than the shape of fragments. Appearance-based recognition is used only when the pottery is undecorated.
+	
+	\subsubsection{Shape-based Recognition}
+	\ 
+	
+	The recognition tool was designed as a two-phase process, where the classification algorithm was first developed on one dataset and then validated on other datasets for different types of pottery.
+	
+	The dataset used 65 standardised toplevel classes defined in Conspectus catalogue\cite{first_phase}. 2D model are created from these drawings and photos taken in archaeological warehouses throughout Europe by extracting the profile of the entire vessel from 2D drawing. Then 2D model rotate around revolution axis to form 3D models.
+	
+	Each 3D model were shattered by many random 3D planes into derive synthetic sherds, the fracture of which is reduced to match real potsherds' dimensions. \cite{Dellepiane2017FromPT} The progress is shown in Figure \ref{process}.
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.5\textwidth]{./picture/process.png}
+		\caption{Stpes from extracting profiles from 2D drawings, to creation of 3D models to be broken.}
+		\label{process}
+	\end{figure} 
+
+	The network was trained based on the requirement to divide the inner and the outer profile of the sherd, the relevance of the position of the points along the profile outline, the intrinsic noise in the tracing procedure, and the requirement to overcome sub-optimal data acquisition processes\cite{ANICHINI2021102788}, the example of which is in Figure \ref{process2}.
+	
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.5\textwidth]{./picture/process2.png}
+		\caption{Extraction of the outer (green) and inner (red) profiles from image.}
+		\label{process2}
+	\end{figure} 
+	
+	\subsection{Result}
+	
+	
+	
+	\subsection{App}
+	
+	ArchAIDE also create a mobile application connected to AI classifiers to support archaeologists in recognizing potsherds during excavation and post-excavation analysis, with an easy-to-use interface.
 	
 	\section{Shortage}
 	

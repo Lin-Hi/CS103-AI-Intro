@@ -3,47 +3,52 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: bare_jrnl.aux
 The style file: acm.bst
 Database file #1: cited.bib
+Too many commas in name 1 of "Michael Heinzelmann, Marianne Bergmann, Jean-Yves Empereur, Pascale Ballet" for entry CERAMALEX
+while executing---line 1092 of file acm.bst
+Warning--empty booktitle in Anichini2018BigAD
 Warning--empty booktitle in Syrian_images
 Warning--empty booktitle in AOD
-You've used 10 entries,
+Too many commas in name 1 of "Michael Heinzelmann, Marianne Bergmann, Jean-Yves Empereur, Pascale Ballet" for entry CERAMALEX
+while executing---line 1133 of file acm.bst
+You've used 19 entries,
             2253 wiz_defined-function locations,
-            594 strings with 5815 characters,
-and the built_in function-call counts, 3006 in all, are:
-= -- 270
-> -- 150
+            651 strings with 8236 characters,
+and the built_in function-call counts, 6551 in all, are:
+= -- 568
+> -- 423
 < -- 0
-+ -- 63
-- -- 52
-* -- 250
-:= -- 510
-add.period$ -- 28
-call.type$ -- 10
-change.case$ -- 56
++ -- 175
+- -- 154
+* -- 570
+:= -- 1123
+add.period$ -- 54
+call.type$ -- 19
+change.case$ -- 134
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 107
-empty$ -- 247
-format.name$ -- 52
-if$ -- 605
+cite$ -- 22
+duplicate$ -- 198
+empty$ -- 475
+format.name$ -- 154
+if$ -- 1294
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 10
-newline$ -- 51
-num.names$ -- 20
-pop$ -- 61
+int.to.str$ -- 19
+missing$ -- 17
+newline$ -- 95
+num.names$ -- 38
+pop$ -- 149
 preamble$ -- 1
-purify$ -- 46
+purify$ -- 115
 quote$ -- 0
-skip$ -- 50
+skip$ -- 100
 stack$ -- 0
-substring$ -- 154
-swap$ -- 18
+substring$ -- 293
+swap$ -- 35
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
-warning$ -- 2
-while$ -- 26
-width$ -- 12
-write$ -- 93
-(There were 2 warnings)
+type$ -- 76
+warning$ -- 3
+while$ -- 48
+width$ -- 21
+write$ -- 178
+(There were 2 error messages)

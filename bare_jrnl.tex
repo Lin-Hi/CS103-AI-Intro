@@ -444,12 +444,12 @@
 	% As a general rule, do not put math, special symbols or citations
 	% in the abstract or keywords.
 	\begin{abstract}
-		AAA
+		Recently more and more AI techniques are used in archaeology area, one of which is machine learning (ML). Application of ML can be divided into two main categories: object classification and site searching. Classification can not only be used to classify fragments, like pottery or papyrus, but also help to merge messy fragments into complete patterns. Site searching is a new topic raise recently thanks to the popularity of satellites, whose generated systematized data offers premises for ML. But ML still has some shortage, most of which limited by nature of archaeology. In future, ML maybe more used in identification of archaeological sites, or illegal treatment about art products. 
 	\end{abstract}
 	
 	% Note that keywords are not normally used for peerreview papers.
 	\begin{IEEEkeywords}
-		AAA
+		Archaeology, machine learning, classification, site searching.
 	\end{IEEEkeywords}
 	
 	
@@ -487,19 +487,17 @@
 	% and "HIS" in caps to complete the first word.
 	\IEEEPARstart {A}{rtificial} Intelligence (AI for short) is a new study area rising in recent centuries, and can be divided into several directions, like Machine Learning (ML) or Neural Network (NN). Five to ten years ago, they were concepts unknown to archaeologists. But now, AI is widely used, there are even sessions dedicated to AI at archaeological conferences.\cite{heritage4010008}
 	
-	\subsection{Machine Learning}
-	
 	ML is programming allowing algorithm learning from data and adjust its parameters and then make predictions on new data. Objects must be quantify into digital data first and can be any type, like sonar data under water\cite{Drap2018UnderwaterPF} or aerial
 	laser scanning data \cite{rs10020225}. ML uses mathematical techniques to analyze a set of already-classified objects and generate "classifiers" for each category. In theory, objects in every category is identified from other categories in mathematics. In short, ML use math to classify quantifiable objects into different groups.\cite{bickler_2021}
 	
-	\subsection{ML Application}
+	Ml application can be divided into two main types: classify archaeological objects, and identify archaeological sites, both of which will be explained more detailed in \ref{application}. 
 	
-	ML application can be divided into two main types: to classify archaeological objects, and to detect objects in archaeological sites.
+	Deep learning(DL) a branch of ML, the biggest difference is that, ML needs human to appoint characteristics of object to be trained, while DL do not need pre-appointed characteristics. What DL processing is a large number of data, and DL can learn and choose significant characteristics by itself. DL will first determine which characteristics are related to its goal, then attempt to obtain accessible features on layer level, finally determine which accessible features match its goal best.
 	
 	
 	\section{Application}\label{application}
 
-	Deep learning (DL) has been successfully used in many applications. Among the DL
+	DL has been successfully used in many applications. Among the DL
 	methods, recurrent neural networks (RNNs) are good at dealing with sequential data as they
 	take into account temporal information. RNNs have been applied in speech recognition to
 	map acoustic sequences to phonetic sequences. RNNs have also been used in natural
@@ -648,7 +646,137 @@
 	We believe that there are many other studies using RNNs to study the meaning of certain patterns on ancient artifacts or to try to decipher ancient texts.
 	But this is out of the scope of our survey.
 	
-	\section{A detailed classification}
+	\section{ArchAIDE Project}\label{example}
+	
+	To make things clear, a classic and mature classification project is briefly shown in this part. The reason why classification is chosen rather than searching sites is that, the number of paper about classification is much more than searching area. Among all applications in paper, the most classic and the most mature one is picked out here. 
+	
+	The name of project introduced here is ``ArchAIDE''. The most remarkable characteristic of this project is that, it not only invent algorithm and do analysis on data from both view of shape and decorations, but also realize a system that could have a realworld implementation. 
+	
+	\subsection{General Introduction}
+	
+	ArchAIDE project aims at optimizing the ceramic identification process. It developed two different deep neural networks to recognize pottery through images using a mobile device.The first network is specially used for image recognition, also called appearance-based recognition. The second network uses the shape of fragmentation to identify. 
+	
+	Unlike familiar worries about AI, ArchAIDE will not replace the knowledge of domain specialists. On the contrary, it put archaeologists' role in the center of decision-making process in the identification workflow, which can be seen in \ref{method}.
+	
+	\subsection{Materials}
+	
+	A correct result of classification relies on two parts: the label or the name of each category, and the available data for both shape-based and appearance-based recognition. But first, the class of relics should be determined.
+	
+	\subsubsection{Classes for training}
+	\ 
+	
+	Among all categories of cultural relics, the project choose four realworld classes for training:
+	
+	\begin{itemize}
+		\item Amphorae manufactured throughout the Roman world between the late 3rd century BCE and the early 7th century CE. (Figure \ref{roman})
+		\item Roman Terra Sigillata manufactured in Italy , Spain, and South Gaul between the 1st century BCE and the 3rd century CE.
+		\item Majolica produced in Montelupo Fiorentino (Italy) between 14th and 18th century.
+		\item medieval and post-medieval Majolica from Barcelona and Valencia. (Figure \ref{majolica})
+	\end{itemize}
+	
+	\begin{figure}[htbp]%
+		\centering
+		\subfloat[Roman amphorae]{
+			\label{roman}
+			\includegraphics[width=0.45\linewidth]{./picture/material1.png}
+		}\hfill
+		\subfloat[Majolica of Montelupo Fiorentino]{
+			\label{majolica}
+			\includegraphics[width=0.45\linewidth]{./picture/material2.png}
+		}
+		\caption{Material for training}
+		\label{2figs}
+	\end{figure}
+	
+	\subsubsection{Label}
+	\ 
+	
+	To get correct and helpful label of categories, the project implements following systems:
+	
+	\begin{itemize}
+		\item A digital comparative collection for pottery types, decorations, and stamps, combining digital collections, digitised paper catalogues, and data acquired through photo campaigns.
+		\item A semi-automated system for paper catalogues’ digitisation.
+		\item A multilingual thesaurus of descriptive pottery terms, mapped to the Getty Art and Architecture Thesaurus, which includes French, German, Spanish, Catalan, Portuguese, English, and Italian.		
+	\end{itemize}
+	
+	The digital collections and paper catalogues to create digital comparative collections are from already-present databases. 
+	
+	The first one is ``Roman Amphorae: a digital resource''\cite{Roman_Amphorae}, created by Simon Keay and David Williams of the University of Southampton and published as open data on the Archaeology Data Service, that includes the principal types of roman amphorae between the late 3rd century BCE and the early 7th century CE. The other one is “CERAMALEX” database\cite{CERAMALEX}, a proprietary database of the German and French Heritage 2021.
+	
+	Limited by space, detailed principles of them will not be shown here.
+	
+	\subsubsection{Training images}
+	\ 
+	
+	Multiple photo campaigns were also carried out in several archaeological warehouses, involving more than 30 different institutions in Austria, Italy , and Spain. Overall, 3498 sherds were photographed for training the shape-based recognition model. For appearance-based recognition, a dataset of 13,676 pictures was collected through multiple photography campaigns.
+	
+	To offset disadvantages above in some term, each original image is scaled into four different sizes. On each scaled image, three versions are created: unflipped, horizontally flipped, and vertically flipped. All of these images are cropped, leaving just the central square. As a result, 12 images from each original one were obtained.
+	
+	
+	\subsection{Method}\label{method}
+	
+	The decoration of pottery fragments have higher priority than shape because decorations is more reliable than the shape of fragments. When decoration presents, decoration will be used to identify rather than appearance. Appearance-based recognition is used only when the pottery is undecorated.
+	
+	\subsubsection{Shape-based Recognition}
+	\ 
+	
+	The recognition tool was designed as a two-phase process, where the classification algorithm was first developed on one dataset and then validated on other datasets for different types of pottery.
+	
+	The dataset used 65 standardised toplevel classes defined in Conspectus catalogue\cite{first_phase}. 2D model are created from these drawings and photos taken in archaeological warehouses throughout Europe by extracting the profile of the entire vessel from 2D drawing. Then 2D model rotate around revolution axis to form 3D models.
+	
+	Then many 3D planes are generated randomly. Computer will calculated how all the circles intersect the plane, connecting the intersection points from the circles along the profile to generate the fracture face. To create a more realistic synthetic fracture, we reduced its size to match real potsherds’ dimensions. \cite{Dellepiane2017FromPT} The progress is shown in Figure \ref{process}.
+	
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.5\textwidth]{./picture/process.png}
+		\caption{Stpes from extracting profiles from 2D drawings, to creation of 3D models to be broken.}
+		\label{process}
+	\end{figure} 
+	
+	The network was trained based on the requirement to divide the inner and the outer profile of the sherd, the relevance of the position of the points along the profile outline, the intrinsic noise in the tracing procedure, and the requirement to overcome sub-optimal data acquisition processes\cite{ANICHINI2021102788}, the example of which is in Figure \ref{process2}.
+	
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.5\textwidth]{./picture/process2.png}
+		\caption{Extraction of the outer (green) and inner (red) profiles from image.}
+		\label{process2}
+	\end{figure} 
+	
+	To emphasize, the goal is not to increase accuracy of top-1 but that of top-K, which matches straight-forward sense. Because This fits with its function as a reference tool for pottery specialists who would be glad to evaluate a shortlist of results as part of the obligatory expert validation but would be disappointed to use a tool where the correct result is often completely omitted.
+	
+	\subsubsection{Appearance-based Recognition}
+	
+	It is find in experience that the most challenging factor that affected identification was varying illumination. So different white balance, brightness, and contrast adjustments are simulated. Each pixel's brightness is multiplied by a random factor to simulate different lighting level.
+	
+	Moreover, the background and ruler varied significantly, leading to an inherent bias. The foreground was extracted automatically from the training images using the GrabCut algorithm to avoid this conditioning \cite{GrabCut}.
+	
+	\subsection{App Workflow}\label{workflow}
+	
+	ArchAIDE also create a mobile application connected to AI classifiers to support archaeologists in recognizing potsherds during excavation and post-excavation analysis, with an easy-to-use interface.
+	
+	Archaeologists take a picture of a potsherd and send it to the specifically trained classifier, which returns five suggested matches from the comparative collections. Once the correct type is identified, the information is linked to the photographed sherd and stored within a database that can be shared online. As shown in Figure \ref{pic:workflow}.
+	
+	The mobile application was also designed for allowing the use in lack of internet connectivity , such as in storehouses or remote rural areas. Application provides an area called ``my sites'', dedicated to registered users where it is possible to store information about sites and assemblages. When offline, the app permits storing new images of potsherds or browsing the reference database. The app registers the information locally when offline and then saves the information into the server online.
+	
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.5\textwidth]{./picture/workflow.png}
+		\caption{The double workflow for appearance-based and shape-based recognition from an input image to top 5 results.}
+		\label{pic:workflow}
+	\end{figure}  
+	
+	
+	\section{Shortage}
+	
+	Despite its help, ML still has some limitations.
+	
+	The biggest difficulty is the shortage of training data. Archaeology is widely digitised, but rarely datafied\cite{Anichini2018BigAD}. ML prefers Big Data which is findable, accessible, interoperable, and reusable. But nature of archaeology makes it hard to produce huge data, and much already-had data is unusable due to copyright or legislation.\cite{heritage4010008}
+	
+	ML relies on its previously created model too much, and requires new data to be applicable to its model. Most ML models for archaeological data are less reliable than human experts now, because algorithms can't consider the variation and consistencies of data. That is, human experts can quickly handle easy cases, and move extra time to complicate cases, but algorithms handle every sample with same process and consume similar time. This disadvantage may offset ML advantages of high calculation speed and scalability benefits.\cite{bickler_2021}
+	
+	The diversity of archaeological  objects makes classification more hard. The archaeological recovered samples may become fragmented, or be covered by patina and vegetation. These poor preservation of samples makes classification hard. Moreover, rare and unusual objects may be ignored by ML models. A look-like ``normal'' ceramic vessel may has an unusual surface treatment, which will be easily noticed by human, could be classified into normal category by ML models.\cite{bickler_2021}
+	
+	A third reason is the accuracy of evaluation function in ML model. This sort of bias is of particular concern for archaeologists using ML on data associated with Indigenous communities. Archaeologists can use surveys based on acultural factors to create models that are stripped of cultural context and meaning. But these assumptions are being more and more challenged, especially when surveys focus on behaviors and outcomes rooted in cultural value systems.\cite{2020_challenge}\cite{2019_challenge}
 	
 
 	% needed in second column of first page if using \IEEEpubid

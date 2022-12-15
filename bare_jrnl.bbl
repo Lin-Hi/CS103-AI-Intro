@@ -11,12 +11,6 @@
 {\sc Anichini, F., and Gattiglia, G.}
 \newblock Big archaeological data. the archaide project approach.
 
-\bibitem{inproceedings}
-{\sc Bensedira, B., Layeb, A., and Zendaoui, Z.}
-\newblock A partial tours based path-scanning heuristic for the capacitated arc
-  routing problem.
-\newblock pp.~1--6.
-
 \bibitem{first_phase}
 {\sc Berlin, A., Ettlinger, E., Hedinger, B., Hoffmann, B., Kenrick, P., Pucci,
   G., Roth-Rubi, K., Schneider, G., Schnurbein, S., Wells, C., and
@@ -58,11 +52,6 @@
   framework.
 \newblock In {\em GRAPP\/} (2018).
 
-\bibitem{CARP}
-{\sc Golden, B.~L., and Wong, R.~T.}
-\newblock Capacitated arc routing problems.
-\newblock {\em Networks 11}, 3 (1981), 305--315.
-
 \bibitem{heritage4010008}
 {\sc Gualandi, M.~L., Gattiglia, G., and Anichini, F.}
 \newblock An open system for collection and automatic recognition of pottery
@@ -75,11 +64,6 @@
   using a multi-scale approach and machine learning techniques.
 \newblock {\em Remote Sensing 10}, 2 (2018).
 
-\bibitem{1962Graphic}
-{\sc Mei, K.~K.}
-\newblock Graphic programming using odd or even points.
-\newblock {\em Chinese Mathematics 1\/} (1962), 263--266.
-
 \bibitem{CERAMALEX}
 {\sc Michael~Heinzelmann, Marianne~Bergmann, J.-Y. E. P.~B.}
 \newblock Ceramalex - ancient pottery in alexandria and its chora.
@@ -87,10 +71,10 @@
   \url{https://archaeologie.phil-fak.uni-koeln.de/en/research/research-projects/finished/ceramalex-ancient-pottery-in-alexandria-and-its-chora},
   2022.
 
-\bibitem{RPP}
-{\sc Orloff, C.~S.}
-\newblock A fundamental problem in vehicle routing.
-\newblock {\em Networks 4}, 1 (1974), 35--64.
+\bibitem{GrabCut}
+{\sc Rother, C., Kolmogorov, V., and Blake, A.}
+\newblock Grabcut: Interactive foreground extraction using iterated graph cuts.
+\newblock {\em ACM Trans. Graph. 23\/} (08 2004), 309--314.
 
 \bibitem{Roman_Amphorae}
 {\sc Service, A.~D.}

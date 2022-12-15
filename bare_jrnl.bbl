@@ -1,15 +1,9 @@
 \begin{thebibliography}{10}
 
-\bibitem{ANICHINI2021102788}
-{\sc Anichini, F., Dershowitz, N., Dubbini, N., Gattiglia, G., Itkin, B., and
-  Wolf, L.}
-\newblock The automatic recognition of ceramics from only one photo: The
-  archaide app.
-\newblock {\em Journal of Archaeological Science: Reports 36\/} (2021), 102788.
-
-\bibitem{Anichini2018BigAD}
-{\sc Anichini, F., and Gattiglia, G.}
-\newblock Big archaeological data. the archaide project approach.
+\bibitem{Papyrus}
+{\sc Abitbol, R., Shimshoni, I., and Ben-Dov, J.}
+\newblock Machine learning based assembly of fragments of ancient papyrus.
+\newblock {\em J. Comput. Cult. Herit. 14}, 3 (jul 2021).
 
 \bibitem{ANICHINI2021102788}
 {\sc Anichini, F., Dershowitz, N., Dubbini, N., Gattiglia, G., Itkin, B., and

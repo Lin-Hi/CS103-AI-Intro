@@ -12,7 +12,7 @@ Too many commas in name 1 of "Michael Heinzelmann, Marianne Bergmann, Jean-Yves 
 while executing---line 1133 of file acm.bst
 You've used 19 entries,
             2253 wiz_defined-function locations,
-            651 strings with 8236 characters,
+            651 strings with 8237 characters,
 and the built_in function-call counts, 6551 in all, are:
 = -- 568
 > -- 423

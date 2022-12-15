@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.20)  15 DEC 2022 17:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.20)  15 DEC 2022 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -455,76 +455,75 @@ Package pdftex.def Info: ./picture/fig2.png  used on input line 544.
 <./picture/fig3.png, id=14, 524.71031pt x 447.92343pt>
 File: ./picture/fig3.png Graphic file (type png)
 <use ./picture/fig3.png>
-Package pdftex.def Info: ./picture/fig3.png  used on input line 566.
+Package pdftex.def Info: ./picture/fig3.png  used on input line 568.
 (pdftex.def)             Requested size: 226.79846pt x 193.60802pt.
 <./picture/fig4.png, id=15, 503.63156pt x 173.89969pt>
 File: ./picture/fig4.png Graphic file (type png)
 <use ./picture/fig4.png>
-Package pdftex.def Info: ./picture/fig4.png  used on input line 571.
+Package pdftex.def Info: ./picture/fig4.png  used on input line 573.
 (pdftex.def)             Requested size: 226.79846pt x 78.30984pt.
 <./picture/fig5.png, id=16, 625.58719pt x 411.78844pt>
 File: ./picture/fig5.png Graphic file (type png)
 <use ./picture/fig5.png>
-Package pdftex.def Info: ./picture/fig5.png  used on input line 597.
+Package pdftex.def Info: ./picture/fig5.png  used on input line 599.
 (pdftex.def)             Requested size: 252.0pt x 165.87486pt.
- [2 <./picture/fig1.png> <./picture/fig2.png> <./picture/fig3.png> <./picture/f
-ig4.png>]
-<./picture/fig6.png, id=24, 532.99126pt x 452.4403pt>
+ [2 <./picture/fig1.png> <./picture/fig2.png> <./picture/fig3.png>]
+<./picture/fig6.png, id=23, 532.99126pt x 452.4403pt>
 File: ./picture/fig6.png Graphic file (type png)
 <use ./picture/fig6.png>
-Package pdftex.def Info: ./picture/fig6.png  used on input line 604.
+Package pdftex.def Info: ./picture/fig6.png  used on input line 606.
 (pdftex.def)             Requested size: 252.0pt x 213.91725pt.
-<./picture/fig7.png, id=25, 388.45125pt x 287.57437pt>
+<./picture/fig7.png, id=24, 388.45125pt x 287.57437pt>
 File: ./picture/fig7.png Graphic file (type png)
 <use ./picture/fig7.png>
-Package pdftex.def Info: ./picture/fig7.png  used on input line 633.
+Package pdftex.def Info: ./picture/fig7.png  used on input line 635.
 (pdftex.def)             Requested size: 252.0pt x 186.56131pt.
-<./picture/fig8.png, id=26, 386.94562pt x 284.56313pt>
+<./picture/fig8.png, id=25, 386.94562pt x 284.56313pt>
 File: ./picture/fig8.png Graphic file (type png)
 <use ./picture/fig8.png>
-Package pdftex.def Info: ./picture/fig8.png  used on input line 639.
+Package pdftex.def Info: ./picture/fig8.png  used on input line 641.
 (pdftex.def)             Requested size: 252.0pt x 185.32422pt.
- [3 <./picture/fig5.png> <./picture/fig6.png>]
+ [3 <./picture/fig4.png> <./picture/fig5.png> <./picture/fig6.png>]
+Underfull \vbox (badness 4416) has occurred while \output is active []
+
 <./picture/material1.png, id=32, 462.72874pt x 323.2075pt>
 File: ./picture/material1.png Graphic file (type png)
 <use ./picture/material1.png>
-Package pdftex.def Info: ./picture/material1.png  used on input line 682.
+Package pdftex.def Info: ./picture/material1.png  used on input line 684.
 (pdftex.def)             Requested size: 113.39923pt x 79.20378pt.
 <./picture/material2.png, id=33, 462.72874pt x 320.19624pt>
 File: ./picture/material2.png Graphic file (type png)
 <use ./picture/material2.png>
-Package pdftex.def Info: ./picture/material2.png  used on input line 686.
+Package pdftex.def Info: ./picture/material2.png  used on input line 688.
 (pdftex.def)             Requested size: 113.39923pt x 78.46585pt.
- [4 <./picture/fig7.png> <./picture/fig8.png> <./picture/material1.png> <./pict
-ure/material2.png>]
+ [4 <./picture/fig7.png> <./picture/fig8.png>]
 <./picture/process.png, id=39, 745.78625pt x 355.3275pt>
 File: ./picture/process.png Graphic file (type png)
 <use ./picture/process.png>
-Package pdftex.def Info: ./picture/process.png  used on input line 731.
+Package pdftex.def Info: ./picture/process.png  used on input line 733.
 (pdftex.def)             Requested size: 258.0pt x 122.91884pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 731--732
+Overfull \hbox (6.0pt too wide) in paragraph at lines 733--734
  [][] 
  []
 
-<./picture/process2.png, id=40, 722.7pt x 271.0125pt>
-File: ./picture/process2.png Graphic file (type png)
-<use ./picture/process2.png>
-Package pdftex.def Info: ./picture/process2.png  used on input line 740.
-(pdftex.def)             Requested size: 258.0pt x 96.74976pt.
+File: ./picture/fig4.png Graphic file (type png)
+<use ./picture/fig4.png>
+Package pdftex.def Info: ./picture/fig4.png  used on input line 742.
+(pdftex.def)             Requested size: 258.0pt x 89.08568pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 740--741
+Overfull \hbox (6.0pt too wide) in paragraph at lines 742--743
  [][] 
  []
 
-[5 <./picture/process.png> <./picture/process2.png>]
-<./picture/workflow.png, id=44, 920.43875pt x 567.11874pt>
+[5 <./picture/material1.png> <./picture/material2.png> <./picture/process.png>]
+<./picture/workflow.png, id=43, 920.43875pt x 567.11874pt>
 File: ./picture/workflow.png Graphic file (type png)
 <use ./picture/workflow.png>
-Package pdftex.def Info: ./picture/workflow.png  used on input line 763.
+Package pdftex.def Info: ./picture/workflow.png  used on input line 765.
 (pdftex.def)             Requested size: 258.0pt x 158.96523pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 763--764
+Overfull \hbox (6.0pt too wide) in paragraph at lines 765--766
  [][] 
  []
 
@@ -548,10 +547,10 @@ research / research-[]projects /
 
 ] (./bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
- 6270 strings out of 478268
- 109806 string characters out of 5850344
+ 6263 strings out of 478268
+ 109631 string characters out of 5850344
  409994 words of memory out of 5000000
- 24368 multiletter control sequences out of 15000+600000
+ 24362 multiletter control sequences out of 15000+600000
  510015 words of font info for 104 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  69i,10n,79p,1319b,393s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -560,10 +559,10 @@ Here is how much of TeX's memory you used:
 2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fo
 nts/type1/urw/times/utmbi8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (7 pages, 4440073 bytes).
+Output written on bare_jrnl.pdf (7 pages, 4171645 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

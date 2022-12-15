@@ -490,11 +490,161 @@
 	ML is programming allowing algorithm learning from data and adjust its parameters and then make predictions on new data. Objects must be quantify into digital data first and can be any type, like sonar data under water\cite{Drap2018UnderwaterPF} or aerial
 	laser scanning data \cite{rs10020225}. ML uses mathematical techniques to analyze a set of already-classified objects and generate "classifiers" for each category. In theory, objects in every category is identified from other categories in mathematics. In short, ML use math to classify quantifiable objects into different groups.\cite{bickler_2021}
 	
-	Ml application can be divided into two main types: classify archaeological objects, and identify archaeological sites, both of which will be explained more detailed in \ref{application}.
-
+	Ml application can be divided into two main types: classify archaeological objects, and identify archaeological sites, both of which will be explained more detailed in \ref{application}. 
+	
+	Deep learning(DL) a branch of ML, the biggest difference is that, ML needs human to appoint characteristics of object to be trained, while DL do not need pre-appointed characteristics. What DL processing is a large number of data, and DL can learn and choose significant characteristics by itself. DL will first determine which characteristics are related to its goal, then attempt to obtain accessible features on layer level, finally determine which accessible features match its goal best.
 	
 	
 	\section{Application}\label{application}
+
+	DL has been successfully used in many applications. Among the DL
+	methods, recurrent neural networks (RNNs) are good at dealing with sequential data as they
+	take into account temporal information. RNNs have been applied in speech recognition to
+	map acoustic sequences to phonetic sequences. RNNs have also been used in natural
+	language processing to translate text from one language to another. Another
+	famous method in DL is convolutional neural networks (CNNs). CNNs take into
+	account spatial correlation among data points and hence perform well in image-based data.
+	CNNs have been used in image classification, face recognition,
+	scene labelling, and so on. DL methods are also used in the field of remote sensing.
+	For example, Hu and Yuan used CNNs to extract digital terrain models (DTMs) and filter out non-ground
+	points from airborne laser scanning (ALS) data, which was claimed that this method performs better than
+	previous filtering methods\cite{HuXiangyun2016DCfD}.
+
+	In the papers we've read, we've found that all of them, without exception, use CNNs to study a specific thing.
+	This is because the things they studied were all based on image data, in which CNNs performs better than RNNs.
+
+	We divide the papers that use CNNs into two types: one is to classify archaeological objects like papyrus, potteries, and so on, the other is to detect objects in archaeological sites.
+
+	\subsection{classify archaeological objects}
+
+	\begin{itemize}
+	\item In the paper\cite{Papyrus}, a method is proposed for matching and assembling pairs of ancient papyrus fragments containing mostly unknown scriptures.
+		  This task, which is assembling fragments in a puzzle-like manner into a composite picture, plays an important role in the archaeology, because it can help historic artifacts to reconstruct archaeological objects for research.
+		  The proposed method is to use image processing and machine learning techniques to identify matching fragments, and then support the quick and automated classification of matching pairs of papyrus fragments as well
+		  as the geometric alignment of the pairs against each other. The algorithm was trained on a batch of fragments which was excavated from the Dead Sea caves and is dated circa the 1st
+		  century BCE. The algorithm shows excellent results on a validation set which is of a similar origin and conditions.
+		  Then the algorithm was used to  against a real-life set of fragments for with no prior knowledge or labeling of matches.
+		  This test batch is considered extremely challenging due to its poor condition and the small size of its fragments. Evidently,
+		  numerous researchers have tried seeking matches within this batch with very little success. The algorithm performance on
+		  this batch was sub-optimal, returning a relatively large ratio of false positives. However, the results showed that this algorithm
+		  eliminated 98\% of the possible matches thus reducing the amount of work needed for manual inspection, which means this algorithm was quite useful. Indeed, experts that
+		  reviewed the results have identified some positive matches as potentially true and referred them for further investigation.
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.9\linewidth]{./picture/fig1.png}
+			\caption{An example of two adjacent artificially torn fragments with a set of candidate squares to be used in
+			the matching phase.}
+		  \end{figure}
+	\item In the paper\cite{Syrian_images}, the project developed at Dumbarton Oaks---a research institute and library, museum, and historic 
+		  garden affiliated with Harvard University and located in Washington, DC--- focused on a 
+		  collection of 10,000 images of Syrian monuments in the institution's Image Collections and 
+		  Fieldwork Archives (ICFA). Drawing on that project, as well as the broader landscape of AI-based categorisation efforts in the fields of art and architecture, authors' insights on the potential of AI to facilitate and enhance archival image access and recording will be shaerd. Many of the Syrian sites in the Dumbarton Oaks collection have been inaccessible to researchers and the public for over a decade and/or have been damaged or destroyed. For Dumbarton Oaks, the primary goal was to explore whether AI can improve the speed and efficiency of sharing collections and allow for more sophisticated curation by subject experts who, thanks to automation, would be relieved of the burden of rote processing. The methods and techniques explored included multi-label classification, multi-task classification, unsupervised image clustering, and explainability.
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.9\linewidth]{./picture/fig2.png}
+			\caption{Explainability heatmaps for predictions of the 
+			classes “architecture” (left) and “façades” (right) by the 
+			Phase 1 classifier.}
+		  \end{figure}
+	\item The main contribution in this paper\cite{heritage4010008} is the completion of the project called ArchAIDE.
+		  This project  realised an AI-based application to recognise archaeological pottery.
+		  Pottery is of paramount importance for understanding archaeological contexts. However, recognition of
+		  ceramics is still a manual, time-consuming activity , reliant on analogue catalogues. The project
+		  developed two complementary machine-learning tools to propose identifications based on images
+		  captured on-site, for optimising and economising this process, while retaining key decision points
+		  necessary to create trusted results. One method relies on the shape of a potsherd; the other is based
+		  on decorative features. For the shape-based recognition, a novel deep-learning architecture was
+		  employed, integrating shape information from points along the inner and outer profile of a sherd.
+		  The decoration classifier is based on relatively standard architectures used in image recognition. In
+		  both cases, training the algorithms meant facing challenges related to real-world archaeological data:
+		  the scarcity of labelled data; extreme imbalance between instances of different categories; and the
+		  need to take note of minute differentiating features. Finally , the creation of a desktop and mobile
+		  application that integrates the AI classifiers provides an easy-to-use interface for pottery classification
+		  and storing pottery data.
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.9\linewidth]{./picture/fig3.png}
+			\caption{The ArchAIDE portal is available at the Archaeology Data Service of the University of York.}
+		  \end{figure}
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=0.9\linewidth]{./picture/fig4.png}
+			\caption{The automated extraction of the outer (green) and inner (red) profiles from a real-world sherd image.}
+		  \end{figure}
+	\item The paper\cite{CeramicFabric} indicate that deep learning with CNNs is a highly accessible and 
+	      effective method for classifying ceramic fabrics based on images of petrographic thin 
+		  sections and that it can likely be applied on a larger scale.
+		  Classification of ceramic fabrics has long held a major role in archaeological pursuits. 
+		  It helps answer research questions related to ceramic technology, provenance, and 
+		  exchange and provides an overall deeper understanding of the ceramic material at 
+		  hand. One of the most effective means of classification is through petrographic thin 
+		  section analysis. However, ceramic petrography is a difficult and often tedious task 
+		  that requires direct observation and sorting by domain experts. In this paper, a deep 
+		  learning model is built to automatically recognize and classify ceramic fabrics, which 
+		  expedites the process of classification and lessens the requirements on experts. The 
+		  samples consist of images of petrographic thin sections under cross-polarized light 
+		  originating from the Cocal-period (AD 1000-1525) archaeological site of Guadalupe 
+		  on the northeast coast of Honduras. Two CNNs, 
+		  VGG19 and ResNet50, are compared against each other using two approaches to 
+		  partitioning training, validation, and testing data. The technique employs a standard 
+		  transfer learning process whereby the bottom layers of the CNNs are pre-trained 
+		  on the ImageNet dataset and frozen, while a single pooling layer and three dense 
+		  layers are added to 'tune' the model to the thin section dataset. After selecting fabric 
+		  groups with at least three example sherds each, the technique can classify thin section 
+		  images into one of five fabric groups with over 93\% accuracy in each of four tests. 
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=1.0\linewidth]{./picture/fig5.png}
+			\caption{Examples of the five ceramic fabric types analyzed.}
+		  \end{figure}
+	\item In the study\cite{PawlowiczLeszekM.2021Aodl}, an alternate approach to archaeological typology which uses DL to classify digital 
+		  images of decorated pottery sherds into an existing typological framework is presented. This study focuses on a specific kind of ancient painted pottery from the American Southwest, Tusayan White Ware (TWW), but it is believed that it has broader implications for a wide range of geographical settings and artifact types. The results show that when properly trained, a deep learning model can assign types to digital images of decorated sherds with an accuracy comparable to, and sometimes higher than, four expert-level contemporary archaeologists. The technique also offers novel tools for visualizing both the importance of diagnostic design elements and overall design relationships between groups of pottery sherds. This method can objectively match a specific unclassified sherd image to its most similar counterparts through a search of thousands of digital photos. This discovery has important archaeological implications for analyzing time relationships, monitoring stylistic trends, reconstructing fragmentary artifacts, identifying ancient artisans, and studying the evolution and spread of ancient technologies and styles. It also shows how deep learning models can potentially supplement or supplant traditional typologies in favor of more direct groupings and comparisons of artifacts.
+		  \begin{figure}[htbp]
+			\centering
+			\includegraphics[width=1.0\linewidth]{./picture/fig6.png}
+			\caption{ Grad-CAM heat maps for TWW sherds, showing areas of high (red) and low (blue) model activation for a Kayenta sherd (top) and Flagstaff sherd (bottom). 
+			CNN-model-calculated type confidences shown below each sherd.}
+		  \end{figure}
+	\end{itemize}
+
+	\subsection{detect objects in archaeological sites}
+
+	Airborne laser scanning (ALS) is of great use in
+	collecting and documenting detailed measurements from an area of interest. However, it is
+	time consuming for scientists to manually analyze the collected ALS data. One possible way to
+	automate this process is using deep neural networks.
+
+	In the paper\cite{AOD}, a hierarchical CNN model is builded to detect objects in archaeological sites
+	using digital terrain models (DTMs) generated from ALS data. 
+	The	data is acquired from the Harz mining Region in Lower Saxony, where a high density of different
+	archaeological monuments including the UNESCO world heritage site Historic Town of Goslar,
+	Mines of Rammelsberg, and the Upper Harz Water Management System can be found. Objects to be detected are archaeological
+	objects such as hollow ways, streams, pathways, lakes, streets, ditches, heaps, mining shafts,
+	and more, but for this study, the model is fit to detect 4 classes of objects: natural streams, lakes, tracks, and an 'others' class
+	which represents the rest of the objects for which enough labeled data is not available yet. To
+	compare and validate the method in this paper, some experiments on the same data set using two existing
+	deep learning models were conducted. The first model is VGG-16; an image classification network pretrained
+	on ImageNet data. The second model is a stacked autoencoders model. The results of the
+	classification as analyzed in this paper show that our model is suitably tuned for this task as it
+	achieves the best classification accuracy of around 91 percent, compared to 88 percent and 82
+	percent accuracy by the pretrained and stacked autoencoders models, respectively.
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=1.0\linewidth]{./picture/fig7.png}
+		\caption{Heat maps using filter size 48 x 48. Colors show the confidence of the models in detecting
+		objects at that location.}
+	  \end{figure}
+	  \begin{figure}[htbp]
+		\centering
+		\includegraphics[width=1.0\linewidth]{./picture/fig8.png}
+		\caption{Heat maps using filter size 98 x 98. Colors show the confidence of the models in detecting
+		objects at that location.}
+	  \end{figure}
+
+	\subsection{More}
+
+	We believe that there are many other studies using RNNs to study the meaning of certain patterns on ancient artifacts or to try to decipher ancient texts.
+	But this is out of the scope of our survey.
 	
 	\section{ArchAIDE Project}\label{example}
 	
@@ -537,7 +687,7 @@
 		\caption{Material for training}
 		\label{2figs}
 	\end{figure}
-
+	
 	\subsubsection{Label}
 	\ 
 	
@@ -548,13 +698,13 @@
 		\item A semi-automated system for paper catalogues’ digitisation.
 		\item A multilingual thesaurus of descriptive pottery terms, mapped to the Getty Art and Architecture Thesaurus, which includes French, German, Spanish, Catalan, Portuguese, English, and Italian.		
 	\end{itemize}
-
+	
 	The digital collections and paper catalogues to create digital comparative collections are from already-present databases. 
 	
 	The first one is ``Roman Amphorae: a digital resource''\cite{Roman_Amphorae}, created by Simon Keay and David Williams of the University of Southampton and published as open data on the Archaeology Data Service, that includes the principal types of roman amphorae between the late 3rd century BCE and the early 7th century CE. The other one is “CERAMALEX” database\cite{CERAMALEX}, a proprietary database of the German and French Heritage 2021.
-
+	
 	Limited by space, detailed principles of them will not be shown here.
-
+	
 	\subsubsection{Training images}
 	\ 
 	
@@ -565,7 +715,7 @@
 	
 	\subsection{Method}\label{method}
 	
-	The decoration of pottery fragments have higher priority than shape because decorations is more reliable than the shape of fragments. Appearance-based recognition is used only when the pottery is undecorated.
+	The decoration of pottery fragments have higher priority than shape because decorations is more reliable than the shape of fragments. When decoration presents, decoration will be used to identify rather than appearance. Appearance-based recognition is used only when the pottery is undecorated.
 	
 	\subsubsection{Shape-based Recognition}
 	\ 
@@ -574,15 +724,15 @@
 	
 	The dataset used 65 standardised toplevel classes defined in Conspectus catalogue\cite{first_phase}. 2D model are created from these drawings and photos taken in archaeological warehouses throughout Europe by extracting the profile of the entire vessel from 2D drawing. Then 2D model rotate around revolution axis to form 3D models.
 	
-	Each 3D model were shattered by many random 3D planes into derive synthetic sherds, the fracture of which is reduced to match real potsherds' dimensions. \cite{Dellepiane2017FromPT} The progress is shown in Figure \ref{process}.
-
+	Then many 3D planes are generated randomly. Computer will calculated how all the circles intersect the plane, connecting the intersection points from the circles along the profile to generate the fracture face. To create a more realistic synthetic fracture, we reduced its size to match real potsherds’ dimensions. \cite{Dellepiane2017FromPT} The progress is shown in Figure \ref{process}.
+	
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=0.5\textwidth]{./picture/process.png}
 		\caption{Stpes from extracting profiles from 2D drawings, to creation of 3D models to be broken.}
 		\label{process}
 	\end{figure} 
-
+	
 	The network was trained based on the requirement to divide the inner and the outer profile of the sherd, the relevance of the position of the points along the profile outline, the intrinsic noise in the tracing procedure, and the requirement to overcome sub-optimal data acquisition processes\cite{ANICHINI2021102788}, the example of which is in Figure \ref{process2}.
 	
 	\begin{figure}[htbp]
@@ -592,7 +742,7 @@
 		\label{process2}
 	\end{figure} 
 	
-	 To emphasize, the goal is not to increase accuracy of top-1 but that of top-K.
+	To emphasize, the goal is not to increase accuracy of top-1 but that of top-K, which matches straight-forward sense. Because This fits with its function as a reference tool for pottery specialists who would be glad to evaluate a shortlist of results as part of the obligatory expert validation but would be disappointed to use a tool where the correct result is often completely omitted.
 	
 	\subsubsection{Appearance-based Recognition}
 	
@@ -604,7 +754,9 @@
 	
 	ArchAIDE also create a mobile application connected to AI classifiers to support archaeologists in recognizing potsherds during excavation and post-excavation analysis, with an easy-to-use interface.
 	
-	Archaeologists take a picture of a potsherd and send it to the specifically trained classifier, which returns five suggested matches from the comparative collections. Once the correct type is identified, the information is linked to the photographed sherd and stored within a database that can be shared online. As shown in \ref{pic:workflow}.
+	Archaeologists take a picture of a potsherd and send it to the specifically trained classifier, which returns five suggested matches from the comparative collections. Once the correct type is identified, the information is linked to the photographed sherd and stored within a database that can be shared online. As shown in Figure \ref{pic:workflow}.
+	
+	The mobile application was also designed for allowing the use in lack of internet connectivity , such as in storehouses or remote rural areas. Application provides an area called ``my sites'', dedicated to registered users where it is possible to store information about sites and assemblages. When offline, the app permits storing new images of potsherds or browsing the reference database. The app registers the information locally when offline and then saves the information into the server online.
 	
 	\begin{figure}[htbp]
 		\centering
@@ -612,6 +764,7 @@
 		\caption{The double workflow for appearance-based and shape-based recognition from an input image to top 5 results.}
 		\label{pic:workflow}
 	\end{figure}  
+	
 	
 	\section{Shortage}
 	
@@ -623,14 +776,45 @@
 	
 	The diversity of archaeological  objects makes classification more hard. The archaeological recovered samples may become fragmented, or be covered by patina and vegetation. These poor preservation of samples makes classification hard. Moreover, rare and unusual objects may be ignored by ML models. A look-like ``normal'' ceramic vessel may has an unusual surface treatment, which will be easily noticed by human, could be classified into normal category by ML models.\cite{bickler_2021}
 	
-	A third reason is the accuracy of evaluation function in ML model. This often appears in factors related to culture or belief. Archaeologists can use surveys based on acultural factors to create models that are stripped of cultural context and meaning. But these assumptions are being more and more challenged, especially when surveys focus on behaviors and outcomes rooted in cultural value systems.\cite{2019_challenge}\cite{2020_challenge}
+	A third reason is the accuracy of evaluation function in ML model. This sort of bias is of particular concern for archaeologists using ML on data associated with Indigenous communities. Archaeologists can use surveys based on acultural factors to create models that are stripped of cultural context and meaning. But these assumptions are being more and more challenged, especially when surveys focus on behaviors and outcomes rooted in cultural value systems.\cite{2020_challenge}\cite{2019_challenge}
 	
-	
-	
+
 	% needed in second column of first page if using \IEEEpubid
 	%\IEEEpubidadjcol
-	
-	
+
+	\section{future}
+
+	Nowadays, archaeologists utilize AI in many ways, from creating 3D models of historical sights
+	to scanning territories with a laser radar to find ancient graves or from matching and
+	assembling pairs of ancient papyrus fragments containing mostly unknown scripture to detecting
+	objects in archaeological sites using DTMs generated from ALS data. There is no denying that 
+	AI becomes more and more popular in the field of archaeology and plays an important role in it.
+
+	One direction for the future development of intelligent archaeology is helping archaeologists' work.
+	For example, archaeologists often face such problems as not knowing where exactly to dig. 
+	They can define the region but not the exact place where an artifact or a grave lies. 
+	It's when the neural network comes in line. Instead of looking through millions of documents by themselves, 
+	archaeologists pass this work to neural networks. This technology can sort out information by utilizing a 
+	specific algorithm. By analyzing images, this system might not only direct archaeologists in their 
+	groundworks but also suggest territories that have similar patterns as potential objects for excavations.
+
+	However, knowing that many ML systems --- especially deep neural networks --- are essentially considered black boxes.
+	This makes it hard to understand and explain the results given by a model. Because of this, it should be noted that AI does not 
+	replace the need for experts in archaeology. Instead, AI technology needs the expertise from archaeologists to improve itself and 
+	to judge the correctness of the results.
+
+	Another direction is to strengthen the identification of the artifacts.
+	In our world, one of the most urgent problems in archaeology is the fact that
+	many artifacts are traded on the dark web. Although 
+	many models trained in this direction have achieved 
+	quite good results, they are not yet ready to be 
+	applied in practice. Currently, the majority of 
+	detection operations are performed manually.
+	If an AI can succeed in this direction, it would 
+	make an extraordinary contribution to the prevention of 
+	art-related illegal activities.
+
+	We expect that in the future, artificial intelligence technology will play an increasing, even irreplaceable role in the field of archaeology.
 	
 	% An example of a floating figure using the graphicx package.
 	% Note that \label must occur AFTER (or within) \caption.
@@ -725,6 +909,7 @@
 	% Note that, LaTeX2e, unlike IEEE journals/conferences, places
 	% footnotes above bottom floats. This can be corrected via the
 	% \fnbelowfloat command of the stfloats package.
+	
 	
 	
 	
